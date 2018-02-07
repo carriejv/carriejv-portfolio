@@ -1,0 +1,16 @@
+include includes/head.pug
+
+body
+    include includes/nav.pug
+    div(id='content' class='container single-row-center-container')
+        div(class='row align-items-center justify-content-center flex-column flex-md-row')
+            div(id='home-logo')
+                img(src='/static/media/carrievrtis-logo.png' alt='Carrie Vrtis Logo')
+            div(id='home-text' class='text-shadow text-center')
+                h1 #{lang.home.intro.start}
+                    span(class='alight') #{lang.home.intro.end}
+                h2 #{lang.home.subtext.start}
+                    span(id='swaptext' class='adark') #{lang.home.subtext.end[0]}
+                h3
+                    a(href='/about') #{lang.home.aboutlink} &raquo;
+    include includes/footer.pug

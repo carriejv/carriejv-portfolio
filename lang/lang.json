@@ -1,0 +1,294 @@
+{
+    "en": {
+        "lang": "en",
+        "meta": {
+            "description": "Carrie Vrtis is a Portland, OR based web designer, photographer, and digital multimedia marketing professional."
+        },
+        "home": {
+            "name": "Home",
+            "intro": {
+                "start": "Hi, I'm ",
+                "end": "Carrie Vrtis."
+            },
+            "subtext": {
+                "start": "I am ",
+                "end": [
+                    "a digital media designer."
+                ]
+            },
+            "aboutlink": "See More"
+        },
+        "about": {
+            "name": "About",
+            "summary": {
+               "name": "About Me",
+               "p": [
+                   "I produce websites and multimedia packages that combine text, photos, videos, and interactive elements.",
+                   "I have worked in web development for six years on a wide array of projects - commercial, educational, and entertainment.",
+                   "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career.",
+                   "My photography has been recognized by Magnum Photos, an international photography cooperative.",
+                   "I'm also experienced in writing SEO-friendly copy and social media marketing for my content.",
+                   "In my free time I do pretty much all the same things (honestly). I just break things more often trying to do something interesting."
+               ]
+            },
+            "tech": {
+                "name": "Technology",
+                "list": [
+                    {
+                        "name": "Front End Web",
+                        "sublist": [
+                            "HTML6",
+                            "Jade/Pug",
+                            "Twig",
+                            "CSS3",
+                            "Sass/Less",
+                            "Javascript ES8",
+                            "Bootstrap",
+                            "AngularJS"
+                        ]
+                    },
+                    {
+                        "name": "Back End Web",
+                        "sublist": [
+                            "Java",
+                            "Python",
+                            "PHP",
+                            "Symfony",
+                            "NodeJS",
+                            "Express",
+                            "Vert.x",
+                            "SQL/MySQL/SQLite",
+                            "MongoDB",
+                            "Firebase"
+                        ]
+                    },
+                    {
+                        "name": "Dev Tools",
+                        "sublist": [
+                            "Git",
+                            "Svn",
+                            "NPM",
+                            "Yarn",
+                            "Bower",
+                            "Grunt",
+                            "Gradle"
+                        ]
+                    },
+                    {
+                        "name": "Design",
+                        "sublist": [
+                            "MS Office Suite",
+                            "Illustrator",
+                            "Photoshop",
+                            "Premiere"
+                        ]
+                    },
+                    {
+                        "name": "Photo",
+                        "sublist": [
+                            "Sony α7-II (Primary)",
+                            "Fuji HS35EXR (Backup)"
+                        ]
+                    }
+                ]
+            },
+            "social": {
+                "name": "Links",
+                "resume": "See my resumé"
+            }
+        },
+        "project": {
+            "built": "Made with..."
+        },
+        "code": {
+            "name": "Code"
+        },
+        "design": {
+            "name": "Design",
+            "pdf": "View as PDF"
+        },
+        "photo": {
+            "name": "Photos",
+            "prints": "Prints available on Redbubble."
+        },
+        "writing": {
+            "name": "Writing"
+        },
+        "contact": {
+            "name": "Contact",
+            "header": "Get in Touch...",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "company": "Company",
+            "email": "Your Email",
+            "subject": "Subject",
+            "message": "Message",
+            "sendCopy": "Send yourself a copy?",
+            "submit": "Send",
+            "err": {
+                "captcha": "You failed the Recaptcha test. Please try again.",
+                "email": "Please provide a contact email.",
+                "fail": "Sorry, something went wrong. Try again."
+            },
+            "confirm": "Your message has been sent!"
+        },
+        "legal": {
+            "language": "Language"
+        },
+        "error": {
+            "404": {
+                "message": "Sorry, we couldn't find what you were looking for."
+            },
+            "500": {
+                "message": "Sorry, something went wrong.",
+                "instruction": "Try again. Contact me if the problem persists."
+            }
+        }
+    },
+    "es": {
+        "lang": "es",
+        "meta": {
+            "description": "Carrie Vrtis es una diseñadora web, fotógrafa, y productora de publicidad en línea de Portland, OR."
+        },
+        "home": {
+            "name": "Inicio",
+            "intro": {
+                "start": "Hola, me llamo ",
+                "end": "Carrie Vrtis."
+            },
+            "subtext": {
+                "start": "Soy una ",
+                "end": [
+                    "diseñadora de los medios digitales."
+                ]
+            },
+            "aboutlink": "Vea Más"
+        },
+        "about": {
+            "name": "Acerca De",
+            "summary": {
+                "name": "Acerca De",
+                "p": [
+                    "Produzco sitios del web y paquetes de texto, fotos, videos, y funciones interactivas.",
+                    "He trabajado en el diseño web por seis años en un gran variedad de projectos para comercio, educación, y entretenimiento.",
+                    "He diseñado para audiencias con necesidades especiales y problemas de accesibilidad por un gran parte de mi carrera.",
+                    "Mi fotografía fue reconocido por Magnum Photos, un cooperativa de fotografía internacional.",
+                    "Tengo experiencia en la optimización para buscadores y anunciar de las redes sociales.",
+                    "En mi tiempo libre hago casi todas las mismas cosas. Simplemente rompo las cosas más a menudo intentando algo interesante."
+                ]
+             },
+             "tech": {
+                 "name": "Tecnología",
+                 "list": [
+                     {
+                         "name": "Código de Interfaz",
+                         "sublist": [
+                             "HTML6",
+                             "Jade/Pug",
+                             "Twig",
+                             "CSS3",
+                             "Sass/Less",
+                             "Javascript ES8",
+                             "Bootstrap",
+                             "AngularJS"
+                         ]
+                     },
+                     {
+                         "name": "Código de Servidor",
+                         "sublist": [
+                             "Java",
+                             "Python",
+                             "PHP",
+                             "Symfony",
+                             "NodeJS",
+                             "Express",
+                             "Vert.x",
+                             "SQL/MySQL/SQLite",
+                             "MongoDB",
+                             "Firebase"
+                         ]
+                     },
+                     {
+                         "name": "Útiles",
+                         "sublist": [
+                             "Git",
+                             "Svn",
+                             "NPM",
+                             "Yarn",
+                             "Bower",
+                             "Grunt",
+                             "Gradle"
+                         ]
+                     },
+                     {
+                         "name": "Diseño",
+                         "sublist": [
+                             "MS Office",
+                             "Illustrator",
+                             "Photoshop",
+                             "Premiere"
+                         ]
+                     },
+                     {
+                         "name": "Cámaras",
+                         "sublist": [
+                             "Sony α7-II (Primario)",
+                             "Fuji HS35EXR (Reserva)"
+                         ]
+                     }
+                 ]
+             },
+             "social": {
+                 "name": "Enlaces",
+                 "resume": "Mira mi currículum"
+             }
+        },
+        "project": {
+            "built": "Hecho con..."
+        },
+        "code": {
+            "name": "Código"
+        },
+        "design": {
+            "name": "Diseño",
+            "pdf": "Vea como PDF"
+        },
+        "photo": {
+            "name": "Fotos",
+            "prints": "Compre impresas."
+        },
+        "writing": {
+            "name": "Escritura"
+        },
+        "contact": {
+            "name": "Contácteme",
+            "header": "Contácteme...",
+            "firstName": "Nombre",
+            "lastName": "Apellido",
+            "company": "Empresa",
+            "email": "Su Correo Electrónico",
+            "subject": "Asunto",
+            "message": "Mesanje",
+            "sendCopy": "¿Recibir una copia?",
+            "submit": "Enviar",
+            "err": {
+                "captcha": "Recaptcha falló. Inténtalo de nuevo.",
+                "email": "Por favor de un correo electrónico.",
+                "fail": "Lo siento, algo salió mal. Intenta de nuevo."
+            },
+            "confirm": "¡Su mensaje ha enviado!"
+        },
+        "legal": {
+            "language": "Idioma"
+        },
+        "error": {
+            "404": {
+                "message": "¡Lo siento! Lo que busta no está aquí."
+            },
+            "500": {
+                "message": "¡Lo siento! Algo salió mal.",
+                "instruction": "Contacteme por favor si la problema se repita."
+            }
+        }
+    }
+}

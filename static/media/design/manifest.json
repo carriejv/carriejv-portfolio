@@ -1,0 +1,153 @@
+{
+    "default": "graphics",
+    "graphics": {
+        "default": "cooking-matters",
+        "category": {
+            "en": "Graphics",
+            "es": "Gráficos"
+        },
+        "projects": {
+            "cooking-matters": {
+                "name": "Cooking Matters",
+                "subtitle": {
+                    "en": "Flyer",
+                    "es": "Volante"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/cooking-matters.jpg",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            },
+            "hcm": {
+                "name": "Housing Case Management",
+                "subtitle": {
+                    "en": "Infographic",
+                    "es": "Infografía"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/hcm.png",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            },
+            "oakley": {
+                "name": "Oakley Graphics",
+                "subtitle": {
+                    "en": "Logo",
+                    "es": "Logo"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/oakley.jpg",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            },
+            "harvest-feast": {
+                "name": "Harvest Feast",
+                "subtitle": {
+                    "en": "Flyer",
+                    "es": "Volante"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/harvest-feast.jpg",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            },
+            "foodrx": {
+                "name": "FoodRx Year One",
+                "subtitle": {
+                    "en": "Infographic",
+                    "es": "Infografía"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-year-1-r161026.png",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            } 
+        }
+    },
+    "text": {
+        "default": "foodrx-newsletter-1",
+        "category": {
+            "en": "Text",
+            "es": "Texto"
+        },
+        "projects": {
+            "foodrx-newsletter-1": {
+                "name": "FoodRx Newsletter",
+                "subtitle": {
+                    "en": "Newsletter",
+                    "es": "Hoja Informativa"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-newsletter-17mar-1.png",
+                "pdf": "/static/media/design/design-cache/foodrx-newsletter-17mar.pdf",
+                "tech": [
+                    "Adobe Illustrator",
+                    "Adobe InDesign",
+                    "Constant Contact"
+                ]
+            },
+            "foodrx-newsletter-2": {
+                "name": "FoodRx Newsletter",
+                "subtitle": {
+                    "en": "Newsletter",
+                    "es": "Hoja Informativa"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-newsletter-17mar-2.png",
+                "pdf": "/static/media/design/design-cache/foodrx-newsletter-17mar.pdf",
+                "tech": [
+                    "Adobe Illustrator",
+                    "Adobe InDesign",
+                    "Constant Contact"
+                ]
+            },
+            "foodrx-forms-1": {
+                "name": "Curative Nutrition Forms",
+                "subtitle": {
+                    "en": "Form",
+                    "es": "Formulario"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-cn-forms-1.png",
+                "pdf": "/static/media/design/design-cache/foodrx-cn-forms.pdf",
+                "tech": [
+                    "Adobe Illustrator",
+                    "Adobe InDesign"
+                ]
+            },
+            "foodrx-forms-2": {
+                "name": "Curative Nutrition Forms",
+                "subtitle": {
+                    "en": "Form",
+                    "es": "Formulario"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-cn-forms-2.png",
+                "pdf": "/static/media/design/design-cache/foodrx-cn-forms.pdf",
+                "tech": [
+                    "Adobe Illustrator",
+                    "Adobe InDesign"
+                ]
+            },
+            "foodrx-forms-3": {
+                "name": "Curative Nutrition Forms",
+                "subtitle": {
+                    "en": "Form",
+                    "es": "Formulario"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/foodrx-cn-forms-3.png",
+                "pdf": "/static/media/design/design-cache/foodrx-cn-forms.pdf",
+                "tech": [
+                    "Adobe Illustrator",
+                    "Adobe InDesign"
+                ]
+            }
+        }
+    }
+}

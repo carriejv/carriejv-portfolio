@@ -1,0 +1,20 @@
+div(class='row align-items-center justify-content-start')
+    div(class='col-3 col-md-2')
+        div(class='project-nav-btn-container')
+            button(type='button' class='project-nav-btn-left project-nav-btn' style='background: url("/static/media/buttons/arrow-left.png") center/100% 100% no-repeat')
+    div(class='project-nav-slider-container col-6 col-md-8')
+        div(class='project-nav-slider')
+            each w, j in v.projects
+                if (w.contentType == 'html')
+                    if(activeProj == j)
+                        a(id='project-nav-item-' + j class='project-nav-item project-nav-item-active' href=rootDir + activePage + '/' + k + '/' + j) #{w.name}
+                    else
+                        a(id='project-nav-item-' + j class='project-nav-item' href=rootDir + activePage + '/' + k + '/' + j) #{w.name}
+                if (w.contentType == 'img')
+                    if(activeProj == j)
+                        a(id='project-nav-item-' + j class='project-nav-item project-nav-item-active' href=rootDir + activePage + '/' + k + '/' + j style='background: url("' + w.content.replace('%scale', 256) + '") center/cover no-repeat')
+                    else
+                        a(id='project-nav-item-' + j class='project-nav-item' href=rootDir + activePage + '/' + k + '/' + j style='background: url("' + w.content.replace('%scale', 256) + '") center/cover no-repeat')
+    div(class='col-3 col-md-2' )
+        div(class='project-nav-btn-container')
+            button(type='button' class='project-nav-btn-right project-nav-btn' style='background: url("/static/media/buttons/arrow-right.png") center/100% 100% no-repeat')
