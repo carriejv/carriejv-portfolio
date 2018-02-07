@@ -14,13 +14,14 @@ html, body {
   color: whitesmoke;
   margin: 0;
   min-width: 480px;
-  width: auto !important;
-  height: 100%;
   overflow-x: hidden;
 }
 
 body {
   background: #030303 center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a,
@@ -55,12 +56,20 @@ img {
   max-height: 100%;
 }
 
+#content {
+  margin-top: 96px;
+}
+
 .alight {
   color: #9cbcff;
 }
 
 .adark {
   color: #5a8fff;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-center {
@@ -85,11 +94,11 @@ img {
 }
 
 .single-row-center-container {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
+  flex-grow: 1;
 }
 
 .flex-spacing-container {
@@ -100,10 +109,12 @@ img {
   justify-content: space-evenly;
   align-items: space-around;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .scrollable-container {
-  padding: 112px 0 64px 0;
+  padding-top: 16px;
+  flex-grow: 1;
 }
 
 .img-caption {
@@ -112,27 +123,16 @@ img {
   margin-bottom: 8px;
 }
 
-/* Background Slides */
-.bg-slide {
-  z-index: -999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 /* Navbar */
-#nav {
+#nav-container {
   z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
   background: #030303;
   background: rgba(3, 3, 3, 0.75);
   border-bottom: 3px ridge #030303;
-  width: 100%;
   min-width: 480px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
 #nav .navbar-brand {
@@ -303,18 +303,12 @@ img {
 }
 
 /* Footer */
-#footer {
-  z-index: 999;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+#footer-container {
   background: #030303;
   background: rgba(3, 3, 3, 0.75);
   border-top: 3px groove #030303;
   padding-bottom: 0.3em;
   width: 100%;
-  min-width: 480px;
-  text-align: right;
   color: #909090;
 }
 

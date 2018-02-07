@@ -1,38 +1,41 @@
-div(id='footer')
-    div(id='lang-toggle')
-        | #{lang.legal.language} : 
-        //- Project viewer switcher
-        if (activeCat && activeProj)
-            if (lang.lang == 'en')
-                a(href='/en/' + activePage + '/' + activeCat + '/' + activeProj class='lang-active') EN
-            else
-                a(href='/en/' + activePage + '/' + activeCat + '/' + activeProj) EN
-            | &nbsp;|&nbsp;
-            if (lang.lang == 'es')
-                a(href='/es/' + activePage + '/' + activeCat + '/' + activeProj class='lang-active') ES
-            else
-                a(href='/es/' + activePage + '/' + activeCat + '/' + activeProj) ES
-        //- Project category switcher
-        else if (activeCat)
-            if (lang.lang == 'en')
-                a(href='/en/' + activePage + '/' + activeCat class='lang-active') EN
-            else
-                a(href='/en/' + activePage + '/' + activeCat) EN
-            | &nbsp;|&nbsp;
-            if (lang.lang == 'es')
-                a(href='/es/' + activePage + '/' + activeCat class='lang-active') ES
-            else
-                a(href='/es/' + activePage + '/' + activeCat) ES
-        //- Standard main page switchers
-        else
-            if (lang.lang == 'en')
-                a(href='/en/' + activePage class='lang-active') EN
-            else
-                a(href='/en/' + activePage) EN
-            | &nbsp;|&nbsp;
-            if (lang.lang == 'es')
-                a(href='/es/' + activePage class='lang-active') ES
-            else
-                a(href='/es/' + activePage) ES
-    div(id='legal' class='small-text') Copyright &copy; 2018 Carrie Vrtis. All Rights Reserved.
-div(class='bg-slide' style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+div(id='footer-container' class='container-fluid')
+    div(id='footer')
+        div(class='row')
+            div(class='col-6 align-self-start')
+                div(id='lang-toggle')
+                    | #{lang.legal.language} : 
+                    //- Project viewer switcher
+                    if (activeCat && activeProj)
+                        if (lang.lang == 'en')
+                            a(href='/en/' + activePage + '/' + activeCat + '/' + activeProj class='lang-active') EN
+                        else
+                            a(href='/en/' + activePage + '/' + activeCat + '/' + activeProj) EN
+                        | &nbsp;|&nbsp;
+                        if (lang.lang == 'es')
+                            a(href='/es/' + activePage + '/' + activeCat + '/' + activeProj class='lang-active') ES
+                        else
+                            a(href='/es/' + activePage + '/' + activeCat + '/' + activeProj) ES
+                    //- Project category switcher
+                    else if (activeCat)
+                        if (lang.lang == 'en')
+                            a(href='/en/' + activePage + '/' + activeCat class='lang-active') EN
+                        else
+                            a(href='/en/' + activePage + '/' + activeCat) EN
+                        | &nbsp;|&nbsp;
+                        if (lang.lang == 'es')
+                            a(href='/es/' + activePage + '/' + activeCat class='lang-active') ES
+                        else
+                            a(href='/es/' + activePage + '/' + activeCat) ES
+                    //- Standard main page switchers
+                    else
+                        if (lang.lang == 'en')
+                            a(href='/en/' + activePage class='lang-active') EN
+                        else
+                            a(href='/en/' + activePage) EN
+                        | &nbsp;|&nbsp;
+                        if (lang.lang == 'es')
+                            a(href='/es/' + activePage class='lang-active') ES
+                        else
+                            a(href='/es/' + activePage) ES
+            div(class="col-6 align-self-end text-right")
+                div(id='legal' class='small-text') Copyright &copy; 2018 Carrie Vrtis. All Rights Reserved.
