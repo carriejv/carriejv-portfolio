@@ -13,7 +13,7 @@ html, body {
   font: 16px Lato, 'Open Sans', sans-serif;
   color: whitesmoke;
   margin: 0;
-  min-width: 480px;
+  min-width: 320px;
   overflow-x: hidden;
 }
 
@@ -129,7 +129,7 @@ img {
   background: #030303;
   background: rgba(3, 3, 3, 0.75);
   border-bottom: 3px ridge #030303;
-  min-width: 480px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -223,6 +223,7 @@ img {
 
 .project-nav-tab {
   border: 3px ridge #f0f0f0;
+  padding: 8px 4px;
 }
 
 .project-nav-tab.active {
@@ -358,6 +359,11 @@ img {
   #nav .nav-item {
     font-size: 1.6em;
   }
+}
+
+.project-nav-tab {
+  border: 3px ridge #f0f0f0;
+  padding: 8px 8px;
 }
 
 @media screen and (min-width: 1200px) {

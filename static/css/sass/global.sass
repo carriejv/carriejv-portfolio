@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Lato');
 
-$min-pg-width: 480px;
+$min-pg-width: 320px;
 $accent-color-light: #9cbcff;
 $accent-color-dark: #5a8fff;
 $background-color: #030303;
@@ -199,6 +199,7 @@ img
 
 .project-nav-tab
     border: 3px ridge $highlight-color;
+    padding: 8px 4px;
 
 .project-nav-tab.active
     background: $accent-color-dark !important;
@@ -326,6 +327,10 @@ img
 
     #nav .nav-item
         font-size: 1.6em;
+
+.project-nav-tab
+    border: 3px ridge $highlight-color;
+    padding: 8px 8px;
 
 // Bootstrap xl
 @media screen and (min-width : 1200px)
