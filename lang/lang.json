@@ -268,7 +268,7 @@
             "company": "Empresa",
             "email": "Su Correo Electrónico",
             "subject": "Asunto",
-            "message": "Mesanje",
+            "message": "Mensaje",
             "sendCopy": "¿Recibir una copia?",
             "submit": "Enviar",
             "err": {
