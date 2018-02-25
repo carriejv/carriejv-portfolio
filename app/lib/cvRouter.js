@@ -8,7 +8,7 @@ var locale = require('locale');
 var langSupported = ['en', 'es'];
 var langDefault = 'en';
 
-var secrets = require('../secrets/secrets.json');
+var dockerSecrets = require('docker-secrets');
 var recaptcha = require('node-recaptcha2').Recaptcha;
 var bodyParser = require('body-parser');
 
@@ -70,7 +70,7 @@ module.exports.makeRouter = function(langFile, langForce) {
             response: req.body['g-recaptcha-response']
         };
 
-        var rc = new recaptcha(secrets.recaptcha.public, secrets.recaptcha.private, captchaData);
+        var rc = new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private, captchaData);
 
         rc.verify(function(success, err) {
             if (success) {
