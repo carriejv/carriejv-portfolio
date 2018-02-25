@@ -16,11 +16,10 @@ router.get("/:width/:img",function(req, res) {
         res.redirect('/' + availableWidths[0] + '/' + req.params.img);
     }
     
-    while(availableWidths.indexOf(reqWidth) === -1) {
-        reqWidth++;
-        if(reqWidth > availableWidths[0]) {
-            reqWidth = availableWidths[0];
-            break;
+    var bestMatch = availableWidths[0];
+    for(x in availableWidths) {
+        if(!bestMatch || Math.abs(reqWidth - bestMatch) > Math.abs(reqWidth - x)) {
+            bestMatch = x;
         }
     }
 
