@@ -8,7 +8,7 @@ var path = require('path');
 
 var availableWidths = [1920, 1440, 1200, 960, 768, 576, 256];
 
-router.get("/:width/:img",function(req, res) {
+router.get("/:width/:img", (req, res) => {
 
     var reqWidth = parseInt(req.params.width);
 
@@ -26,9 +26,9 @@ router.get("/:width/:img",function(req, res) {
     var cachePath = path.resolve('static/media/photo/photo-cache/', reqWidth.toString(), req.params.img);
 
     // Cached image check
-    fs.access(cachePath, fs.constants.R_OK, function(err) {
+    fs.access(cachePath, fs.constants.R_OK, (err) => {
         if(!err) {
-            res.sendFile(cachePath, {maxAge: ms('1 month')}, function(err) {
+            res.sendFile(cachePath, {maxAge: ms('1 month')}, (err) => {
                 if(err) {
                     res.status(500).end();
                 }
