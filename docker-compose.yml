@@ -8,7 +8,7 @@ services:
       - "./app:/app"
     working_dir: /app
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     networks:
       - backend
     environment:
@@ -18,7 +18,7 @@ services:
     deploy:
       replicas: 2
       restart_policy:
-        condition: on-failure
+        condition: always
         delay: 5s
         max_attempts: 3
         window: 120s
