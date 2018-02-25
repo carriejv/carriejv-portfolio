@@ -15,8 +15,8 @@
         "locale": "^0.1.0",
         "ms": "^2.1.1",
         "node-recaptcha2": "^2.1.2",
-        "pug": "^2.0.0-rc.4",
-        "sendmail": "^1.2.0"
+        "nodemailer": "^4.6.0",
+        "pug": "^2.0.0-rc.4"
     },
     "start": "server.js",
     "private": true
