@@ -9,13 +9,22 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
 
     var router = express.Router();
 
-    router.get("/",function(req,res) {
+    router.get("/", (req, res) => {
         var activeCat = manifest.default;
         var activeProj = manifest[activeCat].default;
-        res.render(path.resolve('views/project'), { activeCat: activeCat, activeProj: activeProj, projectData: manifest[activeCat].projects[activeProj], lang: req.langData, manifest: manifest, rootDir: rootDir, activePage: pageId, bg: bg });
+        res.render(path.resolve('views/project'), {
+            activeCat: activeCat,
+            activeProj: activeProj,
+            projectData: manifest[activeCat].projects[activeProj],
+            lang: req.langData,
+            manifest: manifest,
+            rootDir: rootDir,
+            activePage: pageId,
+            bg: bg
+        });
     });
     
-    router.get("/:category",function(req,res) {
+    router.get("/:category", (req, res) => {
         var activeCat;
         if(manifest[req.params.category]) {
             activeCat = req.params.category;
@@ -25,10 +34,19 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
             return;
         }
         var activeProj = manifest[activeCat].default;
-        res.render(path.resolve('views/project'), { activeCat: activeCat, activeProj: activeProj, projectData: manifest[activeCat].projects[activeProj], lang: req.langData, manifest: manifest, rootDir: rootDir, activePage: pageId, bg: bg });
+        res.render(path.resolve('views/project'), {
+            activeCat: activeCat,
+            activeProj: activeProj,
+            projectData: manifest[activeCat].projects[activeProj],
+            lang: req.langData,
+            manifest: manifest,
+            rootDir: rootDir,
+            activePage: pageId,
+            bg: bg
+        });
     });
 
-    router.get("/:category/:project",function(req,res) {
+    router.get("/:category/:project", (req, res) => {
         var activeCat;
         if(manifest[req.params.category]) {
             activeCat = req.params.category;
@@ -45,7 +63,16 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
             errorHandler(req, res, 404);
             return;
         }
-        res.render(path.resolve('views/project'), { activeCat: activeCat, activeProj: activeProj, projectData: manifest[activeCat].projects[activeProj], lang: req.langData, manifest: manifest, rootDir: rootDir, activePage: pageId, bg: bg });
+        res.render(path.resolve('views/project'), { 
+            activeCat: activeCat,
+            activeProj: activeProj,
+            projectData: manifest[activeCat].projects[activeProj],
+            lang: req.langData,
+            manifest: manifest,
+            rootDir: rootDir,
+            activePage:pageId,
+            bg: bg 
+        });
     });
 
     return router;
