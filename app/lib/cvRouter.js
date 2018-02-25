@@ -8,24 +8,11 @@ var locale = require('locale');
 var langSupported = ['en', 'es'];
 var langDefault = 'en';
 
-var commandLineOptions = [
-    {name: 'nomail', alias: 'm', type: Boolean}
-];
-var commandLineArgs = require('command-line-args');
-var args = commandLineArgs(commandLineOptions);
-
 var secrets = require('../secrets/secrets.json');
 var recaptcha = require('node-recaptcha2').Recaptcha;
-if(!args.nomail) {
-    var sendmail = require('sendmail')({
-        silent: true,
-        dkim: {
-            privateKey: fs.readFileSync(path.resolve('./secrets/dkim.private'), 'utf8'),
-            keySelector: 'carrievrtis.com'
-        }
-    });
-}
 var bodyParser = require('body-parser');
+
+var nodemailer = require('nodemailer');
 
 var cvProject = require('./cvProject.js');
 var codeManifest = require('../static/media/code/manifest.json');
