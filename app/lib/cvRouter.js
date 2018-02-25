@@ -20,8 +20,8 @@ if(!args.nomail) {
     var sendmail = require('sendmail')({
         silent: true,
         dkim: {
-        privateKey: fs.readFileSync(path.resolve('secrets/mail.private'), 'utf8'),
-        keySelector: 'carrievrtis.com'
+            privateKey: fs.readFileSync(path.resolve('./secrets/dkim.private'), 'utf8'),
+            keySelector: 'carrievrtis.com'
         }
     });
 }

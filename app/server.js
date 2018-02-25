@@ -25,6 +25,6 @@ app.use('/en', enRouter);
 app.use('/es', esRouter);
 app.use('/', localeRouter);
 
-app.listen(34000,function(){
-    console.log("Server live!");
+app.listen(process.env.SERVER_LISTEN_PORT,function(){
+    console.log("Server listening on " + process.env.SERVER_LISTEN_PORT);
 });
