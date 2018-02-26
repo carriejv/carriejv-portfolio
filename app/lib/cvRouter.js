@@ -97,7 +97,7 @@ module.exports.makeRouter = function(langFile, langForce) {
             response: req.body['g-recaptcha-response']
         };
 
-        var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private) : null);
+        var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private, captchaData) : null);
 
         // This code is only used in dev environments in the abscence of secrets.
         if(!rc) {
@@ -129,30 +129,33 @@ module.exports.makeRouter = function(langFile, langForce) {
                     if(usrData.sendCopy) {
                         mailOptions.to = mailOptions.to + ', ' + usrData.email;
                     }     
-                    if(dockerSecrets && rc) {
+                    if(parsedSecrets) {
                         var transporter = nodemailer.createTransport({
-                            host: 'marzana.carrievrtis.com',
-                            port: 465,
-                            secure: true,
+                            host: 'localhost',
+                            port: 25,
+                            secure: false,
                             auth: {
-                                user: dockerSecrets.email.user,
-                                pass: dockerSecrets.email.password
-                            }
+                                user: parsedSecrets.email.user,
+                                pass: parsedSecrets.email.password
+                            },
                         });
 
                         transporter.sendMail(mailOptions, (error, info) => {
                             if (error) {
+                                console.log(error);
                                 res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
                             }
                             else {
+                                console.log('gregg');
                                 res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
                             }
                         });
                     
                     }
                     else {
-                        res.setHeader('Content-Type', 'application/json');
-                        res.send(JSON.stringify(mailOptions));
+                        res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
+                        //res.setHeader('Content-Type', 'application/json');
+                        //res.send(JSON.stringify(mailOptions));
                     }
                 }
                 else {

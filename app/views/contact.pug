@@ -18,6 +18,8 @@ body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/co
                                     div(id='contact-err') #{lang.contact.err.captcha}
                                 else if (response == 'email')
                                     div(id='contact-err') #{lang.contact.err.email}
+                                else if (response == 'fail')
+                                    div(id='contact-err') #{lang.contact.err.fail}
                         input(type='hidden' name='redirect' val=rootDir + '/' + activePage)
                         div(class='form-row form-group')
                             div(class='col')
