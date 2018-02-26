@@ -64,12 +64,11 @@ typings/
 secrets/
 
 # static
-.png
-.jpg
-.jpeg
-.svg
-.pdf
-
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
 
 # nginx runtime files
 nginx/config
