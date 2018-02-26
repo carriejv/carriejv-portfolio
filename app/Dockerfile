@@ -8,7 +8,4 @@ EXPOSE 7946/tcp
 
 EXPOSE 4789/udp
 
-RUN yarn install
 ENTRYPOINT ["nodemon", "start"]
-
-
