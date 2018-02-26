@@ -61,7 +61,7 @@ typings/
 .next
 
 # super secret
-secrets
+secrets/
 
 # static
 *.png
