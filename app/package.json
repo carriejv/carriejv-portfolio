@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "homepage": "http://www.carrievrtis.com",
     "author": "Carrie Vrtis",
-    "license": "W3C",
+    "license": "MIT",
     "scripts": {
         "start": "node server.js"
     },
@@ -17,7 +17,5 @@
         "node-recaptcha2": "^2.1.2",
         "nodemailer": "^4.6.0",
         "pug": "^2.0.0-rc.4"
-    },
-    "start": "server.js",
-    "private": true
+    }
 }
