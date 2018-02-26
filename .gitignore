@@ -71,8 +71,8 @@ secrets
 *.svg
 *.pdf
 *.ico
-static/minisite
-static/downloads
+app/static/minisite
+app/static/downloads
 
 # nginx runtime files
 nginx/config
