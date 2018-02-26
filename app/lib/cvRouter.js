@@ -75,37 +75,32 @@ module.exports.makeRouter = function(langFile, langForce) {
         rc.verify(function(success, err) {
             if (success) {
                 if(usrData.email) {
-                    if(!args.nomail) {
-                        var mailFirstName = (usrData.firstName ? usrData.firstName : '');
-                        var mailLastName = (usrData.firstLast ? usrData.LastName : '');
-                        var mailCompany = (usrData.company ? usrData.company : '');
-                        var mailSubject = (usrData.subject ? usrData.subject : 'No Subject');
-                        var mailMessage = (usrData.message ? usrData.message : 'No Message');
-                        
-                        let mailOptions = {
-                            from: '"Carrie Vrtis" <noreply@carrievrtis.com>',
-                            to: 'cjvrtis@gmail.com',
-                            subject: mailSubject,
-                            text: "CarrieVrtis.com Contact\n\nFrom: " + mailFirstName + " " + mailLastName + " < " + usrData.email + ">\n" + mailCompany + "\n\n" + mailSubject + '\n\n' + mailMessage,
-                            html: '<p>CarrieVrtis.com Contact</p><hr /><p><b>From: ' + mailFirstName + ' ' + mailLastName + ' &lt;' + usrData.email + '&gt;</b></p><p>' + mailCompany + '</p><p>' + mailSubject + '</p><p>' + mailMessage + '</p>'
-                        };
+                    var mailFirstName = (usrData.firstName ? usrData.firstName : '');
+                    var mailLastName = (usrData.firstLast ? usrData.LastName : '');
+                    var mailCompany = (usrData.company ? usrData.company : '');
+                    var mailSubject = (usrData.subject ? usrData.subject : 'No Subject');
+                    var mailMessage = (usrData.message ? usrData.message : 'No Message');
+                    
+                    let mailOptions = {
+                        from: '"Carrie Vrtis" <noreply@carrievrtis.com>',
+                        to: 'cjvrtis@gmail.com',
+                        subject: mailSubject,
+                        text: "CarrieVrtis.com Contact\n\nFrom: " + mailFirstName + " " + mailLastName + " < " + usrData.email + ">\n" + mailCompany + "\n\n" + mailSubject + '\n\n' + mailMessage,
+                        html: '<p>CarrieVrtis.com Contact</p><hr /><p><b>From: ' + mailFirstName + ' ' + mailLastName + ' &lt;' + usrData.email + '&gt;</b></p><p>' + mailCompany + '</p><p>' + mailSubject + '</p><p>' + mailMessage + '</p>'
+                    };
 
-                        if(usrData.sendCopy) {
-                            mailOptions.to = mailOptions.to + ', ' + usrData.email;
-                        }
+                    if(usrData.sendCopy) {
+                        mailOptions.to = mailOptions.to + ', ' + usrData.email;
+                    }
                         
-                        sendmail(mailOptions, (error, info) => {
-                            if (error) {
-                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
-                            }
-                            else {
-                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
-                            }
-                        });
-                    }
-                    else {
-                        res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
-                    }
+                    sendmail(mailOptions, (error, info) => {
+                        if (error) {
+                            res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
+                        }
+                        else {
+                            res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
+                        }
+                    });
                 }
                 else {
                     res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'email', usrData: usrData });
