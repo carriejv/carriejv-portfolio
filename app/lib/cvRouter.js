@@ -131,7 +131,7 @@ module.exports.makeRouter = function(langFile, langForce) {
                     }     
                     if(parsedSecrets) {
                         var transporter = nodemailer.createTransport({
-                            host: 'localhost',
+                            host: 'carrievrtis.com',
                             port: 25,
                             secure: false,
                             auth: {
@@ -142,11 +142,9 @@ module.exports.makeRouter = function(langFile, langForce) {
 
                         transporter.sendMail(mailOptions, (error, info) => {
                             if (error) {
-                                console.log(error);
                                 res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
                             }
                             else {
-                                console.log('gregg');
                                 res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
                             }
                         });
