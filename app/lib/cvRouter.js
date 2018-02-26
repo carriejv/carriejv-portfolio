@@ -27,7 +27,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 
     var rootDir = (langForce ? '/' + langForce + '/' : '/');
 
-    router.use(function(req, res, next) {
+    router.use( (req, res, next) => {
         if(langForce) {
             req.langData = langFile[langForce];
         }
@@ -40,17 +40,32 @@ module.exports.makeRouter = function(langFile, langForce) {
     router.use(bodyParser.json());
     router.use(bodyParser.urlencoded({ extended: true })); 
     
-    router.get("/", function(req, res) {
-        res.render(path.resolve('views/index'), { lang: req.langData, rootDir: rootDir, activePage: '', bg: '0' });
+    router.get("/", (req, res) => {
+        res.render(path.resolve('views/index'), {
+            lang: req.langData,
+            rootDir: rootDir,
+            activePage: '',
+            bg: '0'
+        });
     });
     
-    router.get("/about", function(req, res) {
-        res.render(path.resolve('views/about'), { lang: req.langData, rootDir: rootDir, activePage: 'about', bg: '1' });
+    router.get("/about", (req, res) => {
+        res.render(path.resolve('views/about'), {
+            lang: req.langData,
+            rootDir: rootDir,
+            activePage: 'about',
+            bg: '1'
+        });
     });
 
-    router.get("/contact", function(req, res) {
+    router.get("/contact", (req, res) => {
         var rc = new recaptcha(secrets.recaptcha.public, secrets.recaptcha.private);
-        res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML() });
+        res.render(path.resolve('views/contact'), {
+            lang: req.langData,
+            rootDir: rootDir,
+            activePage: 'contact',
+            bg: '6',
+            rc: rc.toHTML() });
     });
 
     router.post("/contact", function(req, res) {
@@ -72,7 +87,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 
         var rc = new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private, captchaData);
 
-        rc.verify(function(success, err) {
+        rc.verify( (success, err) => {
             if (success) {
                 if(usrData.email) {
                     var mailFirstName = (usrData.firstName ? usrData.firstName : '');
@@ -114,15 +129,25 @@ module.exports.makeRouter = function(langFile, langForce) {
 
     /* Multipurpose Error Handler */
 
-    var sendError = function(req, res, err) {
+    var sendError = (req, res, err) => {
         switch(err) {
             case 404:
                 res.statusCode = 404;
-                res.render(path.resolve('views/error/error'), { lang: req.langData, rootDir: rootDir, errorCode: res.statusCode.toString(), bg: '0' });
+                res.render(path.resolve('views/error/error'), { 
+                    lang: req.langData,
+                    rootDir: rootDir,
+                    errorCode: res.statusCode.toString(),
+                    bg: '0'
+                });
                 break;
             default:
                 res.statusCode = 500;
-                res.render(path.resolve('views/error/error'), { lang: req.langData, rootDir: rootDir, errorCode: res.statusCode.toString(), bg: '0' });
+                res.render(path.resolve('views/error/error'), { 
+                    lang: req.langData,
+                    rootDir: rootDir,
+                    errorCode: res.statusCode.toString(),
+                    bg: '0'
+                });
                 break;
         }
     }
@@ -143,7 +168,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 
     /* Generic 404 */
 
-    router.get('*', function(req, res) {
+    router.get('*', (req, res) => {
         sendError(req, res, 404);
     });
 
