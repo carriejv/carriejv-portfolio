@@ -9,11 +9,16 @@ var langSupported = ['en', 'es'];
 var langDefault = 'en';
 
 var dockerSecrets;
+var parsedSecrets = {};
 try {
     dockerSecrets = require('docker-secrets');
+    for(var x of Object.keys(dockerSecrets)) {
+        parsedSecrets[x] = JSON.parse(dockerSecrets[x]);
+    }
 }
 catch(ex) {
     dockerSecrets = null;
+    parsedSecrets = null;
 }
 var recaptcha = require('node-recaptcha2').Recaptcha;
 var bodyParser = require('body-parser');
@@ -65,7 +70,7 @@ module.exports.makeRouter = function(langFile, langForce) {
     });
 
     router.get("/contact", (req, res) => {
-        var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private) : null);
+        var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private) : null);
         res.render(path.resolve('views/contact'), {
             lang: req.langData,
             rootDir: rootDir,
@@ -92,7 +97,7 @@ module.exports.makeRouter = function(langFile, langForce) {
             response: req.body['g-recaptcha-response']
         };
 
-        var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private) : null);
+        var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private) : null);
 
         // This code is only used in dev environments in the abscence of secrets.
         if(!rc) {
