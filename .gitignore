@@ -62,3 +62,7 @@ typings/
 
 # super secret
 secrets/
+
+# nginx runtime files
+nginx/config
+!nginx/config/nginx
