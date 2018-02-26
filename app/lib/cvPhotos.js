@@ -23,7 +23,7 @@ router.get("/:width/:img", (req, res) => {
         }
     }
 
-    var cachePath = path.resolve('static/media/photo/photo-cache/', reqWidth.toString(), req.params.img);
+    var cachePath = path.resolve('static/media/photo/photo-cache/', bestMatch.toString(), req.params.img);
 
     // Cached image check
     fs.access(cachePath, fs.constants.R_OK, (err) => {
