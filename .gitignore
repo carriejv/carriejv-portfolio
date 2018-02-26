@@ -61,12 +61,13 @@ typings/
 .next
 
 # super secret
-secrets/
+secrets
 
 # static
 *.png
 *.jpg
 *.jpeg
+*.gif
 *.svg
 *.pdf
 *.ico
