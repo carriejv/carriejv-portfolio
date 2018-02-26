@@ -63,6 +63,14 @@ typings/
 # super secret
 secrets/
 
+# static
+.png
+.jpg
+.jpeg
+.svg
+.pdf
+
+
 # nginx runtime files
 nginx/config
 !nginx/config/nginx
