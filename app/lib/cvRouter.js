@@ -8,7 +8,13 @@ var locale = require('locale');
 var langSupported = ['en', 'es'];
 var langDefault = 'en';
 
-var dockerSecrets = require('docker-secrets');
+var dockerSecrets;
+try {
+    dockerSecrets = require('docker-secrets');
+}
+catch(ex) {
+    dockerSecrets = null;
+}
 var recaptcha = require('node-recaptcha2').Recaptcha;
 var bodyParser = require('body-parser');
 
@@ -59,13 +65,14 @@ module.exports.makeRouter = function(langFile, langForce) {
     });
 
     router.get("/contact", (req, res) => {
-        var rc = new recaptcha(secrets.recaptcha.public, secrets.recaptcha.private);
+        var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private) : null);
         res.render(path.resolve('views/contact'), {
             lang: req.langData,
             rootDir: rootDir,
             activePage: 'contact',
             bg: '6',
-            rc: rc.toHTML() });
+            rc: (rc ? rc.toHTML() : null)
+        });
     });
 
     router.post("/contact", function(req, res) {
@@ -85,7 +92,17 @@ module.exports.makeRouter = function(langFile, langForce) {
             response: req.body['g-recaptcha-response']
         };
 
-        var rc = new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private, captchaData);
+        var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private) : null);
+
+        // This code is only used in dev environments in the abscence of secrets.
+        if(!rc) {
+            rc = {}
+            rc.verify = function(cb) {
+                if(typeof cb === 'function') {
+                    cb(true, false);
+                }
+            };
+        }
 
         rc.verify( (success, err) => {
             if (success) {
@@ -106,16 +123,32 @@ module.exports.makeRouter = function(langFile, langForce) {
 
                     if(usrData.sendCopy) {
                         mailOptions.to = mailOptions.to + ', ' + usrData.email;
+                    }     
+                    if(dockerSecrets && rc) {
+                        var transporter = nodemailer.createTransport({
+                            host: 'marzana.carrievrtis.com',
+                            port: 465,
+                            secure: true,
+                            auth: {
+                                user: dockerSecrets.email.user,
+                                pass: dockerSecrets.email.password
+                            }
+                        });
+
+                        transporter.sendMail(mailOptions, (error, info) => {
+                            if (error) {
+                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
+                            }
+                            else {
+                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
+                            }
+                        });
+                    
                     }
-                        
-                    sendmail(mailOptions, (error, info) => {
-                        if (error) {
-                            res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
-                        }
-                        else {
-                            res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
-                        }
-                    });
+                    else {
+                        res.setHeader('Content-Type', 'application/json');
+                        res.send(JSON.stringify(mailOptions));
+                    }
                 }
                 else {
                     res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'email', usrData: usrData });

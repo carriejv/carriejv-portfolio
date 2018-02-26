@@ -29,6 +29,8 @@ services:
 secrets:
   recaptcha:
     file: ./secrets/recaptcha.json
+  email:
+    file: ./secrets/email.json
 
 networks:
   backend:
