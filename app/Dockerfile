@@ -4,6 +4,10 @@ RUN npm install -g nodemon
 
 EXPOSE 8080
 
+EXPOSE 7946/tcp
+
+EXPOSE 4789/udp
+
 RUN yarn install
 ENTRYPOINT ["nodemon", "start"]
 

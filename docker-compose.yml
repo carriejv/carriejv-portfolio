@@ -7,8 +7,11 @@ services:
     volumes:
       - "./app:/app"
     working_dir: /app
+    dns:
+      - 9.9.9.9
+      - 208.67.222.222
     ports:
-      - "127.0.0.1:8080:8080"
+      - "8080:8080"
     networks:
       - backend
     environment:
@@ -18,7 +21,32 @@ services:
     deploy:
       replicas: 2
       restart_policy:
-        condition: always
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+  nginx:
+    image: carrievrtis:nginx
+    volumes:
+      - "./nginx/config:/config"
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - backend
+    environment:
+      - URL=carrievrtis.com
+      - SUBDOMAINS=www,ftp,mail
+      - VALIDATION=http
+      - TZ=America/Los_Angeles
+      - PGID=1000
+      - PUID=1000
+      - EMAIL=cjvrtis@gmail.com
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
         delay: 5s
         max_attempts: 3
         window: 120s

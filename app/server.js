@@ -25,10 +25,6 @@ app.use('/en', enRouter);
 app.use('/es', esRouter);
 app.use('/', localeRouter);
 
-app.use('/', () => {
-    console.log('Received request.');
-});
-
 app.listen(process.env.SERVER_LISTEN_PORT, () => {
     console.log("Server listening on " + process.env.SERVER_LISTEN_PORT);
 });
