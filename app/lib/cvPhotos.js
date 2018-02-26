@@ -17,7 +17,7 @@ router.get("/:width/:img", (req, res) => {
     }
     
     var bestMatch = availableWidths[0];
-    for(x in availableWidths) {
+    for(var x in availableWidths) {
         if(!bestMatch || Math.abs(reqWidth - bestMatch) > Math.abs(reqWidth - x)) {
             bestMatch = x;
         }
