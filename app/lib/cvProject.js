@@ -40,7 +40,7 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
             projectData: manifest[activeCat].projects[activeProj],
             lang: req.langData,
             manifest: manifest,
-            rootDir: rootDir,
+        	rootDir: rootDir,
             activePage: pageId,
             bg: bg
         });
