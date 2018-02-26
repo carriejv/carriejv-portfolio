@@ -69,6 +69,9 @@ secrets/
 *.jpeg
 *.svg
 *.pdf
+*.ico
+static/minisite/
+static/downloads/
 
 # nginx runtime files
 nginx/config
