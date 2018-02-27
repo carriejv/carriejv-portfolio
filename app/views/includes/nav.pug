@@ -1,33 +1,12 @@
-div(id='nav-container' class='container-fluid')
-    div(class='row')
-        div(class='col')
-            nav(id='nav' class='navbar navbar-dark navbar-expand-md align-items-center')
-                a(class='navbar-brand' href=rootDir)
-                    img(src='/static/media/carrievrtis-logo-nava.png' alt='Carrie Vrtis')
-                button(class='navbar-toggler' type='button' data-toggle='collapse' data-target='#nav-content' aria-controls='nav-content' aria-expanded='false' aria-label='Toggle navigation')
-                    span(class='navbar-toggler-icon')
-                div(id='nav-content' class='navbar-left collapse navbar-collapse')
-                    if (activePage == 'about')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'about') #{lang.about.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'about') #{lang.about.name}
-                    if (activePage == 'code')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'code') #{lang.code.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'code') #{lang.code.name}
-                    if (activePage == 'design')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'design') #{lang.design.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'design') #{lang.design.name}
-                    if (activePage == 'photo')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'photo') #{lang.photo.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'photo') #{lang.photo.name}
-                    if (activePage == 'writing')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'writing') #{lang.writing.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'writing') #{lang.writing.name}
-                    if (activePage == 'contact')
-                        a(class='nav-item nav-link nav-active' href=rootDir + 'contact') #{lang.contact.name}
-                    else
-                        a(class='nav-item nav-link' href=rootDir + 'contact') #{lang.contact.name}
+div#nav-container.container-fluid
+	div.row
+		div.col
+			nav#nav.navbar.navbar-dark.navbar-expand-md.align-items-center
+				a.navbar-brand(href=rootDir)
+					img(src='/static/media/carrievrtis-logo-nava.png' alt='Carrie Vrtis')
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#nav-content' aria-controls='nav-content' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				div#nav-content.navbar-left.collapse.navbar-collapse
+					- var sections = ['about', 'code', 'design', 'photo', 'writing', 'contact'];
+					each v in sections
+						a.nav-item.nav-link(class=(activePage == v ? 'nav-active' : '') href=rootDir + v) #{lang[v].name}

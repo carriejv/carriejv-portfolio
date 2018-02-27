@@ -1,13 +1,13 @@
-include ../includes/head.pug
+include ../includes/header.pug
 
 body
-    include ../includes/nav.pug
-    div(id='content' class='container single-row-center-container')
-        div(class='row align-items-center justify-content-center flex-column')
-            div(id='home-logo')
-                img(src='/static/media/carrievrtis-logo.png' alt='Carrie Vrtis Logo')
-            div(id='error-text' class='text-shadow text-center')
-                    h1(class='alight') Error #{errorCode}
-                    h2 #{lang.error[errorCode].message}
-                    h3 #{lang.error[errorCode].instruction}
-    include ../includes/footer.pug
+	include ../includes/nav.pug
+	div(id='content' class='container single-row-center-container')
+		div(class='row align-items-center justify-content-center flex-column')
+			div(id='home-logo')
+				img(src='/static/media/carrievrtis-logo.png' alt='Carrie Vrtis Logo')
+			div(id='error-text' class='text-shadow text-center')
+					h1(class='alight') Error #{errorCode}
+					h2 #{lang.error[errorCode].message}
+					h3 #{lang.error[errorCode].instruction}
+	include ../includes/footer.pug

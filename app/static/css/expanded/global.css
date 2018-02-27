@@ -94,11 +94,11 @@ img {
   border: 3px solid #030303;
 }
 
-.single-row-center-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+.scrollable-content {
+  padding-top: 16px;
+}
+
+.flex-grow {
   flex-grow: 1;
 }
 
@@ -110,11 +110,6 @@ img {
   justify-content: space-evenly;
   align-items: space-around;
   flex-wrap: wrap;
-  flex-grow: 1;
-}
-
-.scrollable-container {
-  padding-top: 16px;
   flex-grow: 1;
 }
 
