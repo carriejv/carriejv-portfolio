@@ -1,21 +1,26 @@
 {
-    "name": "carrievrtis.com",
-    "version": "0.2.0",
-    "homepage": "http://www.carrievrtis.com",
-    "author": "Carrie Vrtis",
-    "license": "MIT",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "dependencies": {
-        "body-parser": "^1.18.2",
-        "docker-secrets": "^1.0.2",
-        "exif": "^0.6.0",
-        "express": "^4.16.2",
-        "locale": "^0.1.0",
-        "ms": "^2.1.1",
-        "node-recaptcha2": "^2.1.2",
-        "nodemailer": "^4.6.0",
-        "pug": "^2.0.0-rc.4"
-    }
+	"name": "carriejv-portfolio",
+	"version": "0.3.0",
+	"homepage": "https://www.carrievrtis.com",
+	"author": "Carrie Vrtis",
+	"license": "MIT",
+	"keywords": ["portfolio", "personal-website"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/carriejv/carriejv-portfolio.git"
+	},
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"docker-secrets": "^1.0.2",
+		"exif": "^0.6.0",
+		"express": "^4.16.2",
+		"locale": "^0.1.0",
+		"ms": "^2.1.1",
+		"node-recaptcha2": "^2.1.2",
+		"nodemailer": "^4.6.0",
+		"pug": "^2.0.0-rc.4"
+	}
 }
