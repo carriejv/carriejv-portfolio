@@ -73,6 +73,10 @@ secrets
 *.ico
 app/static/minisite
 app/static/downloads
+app/static/code/code-cache
+app/static/design/design-cache
+app/static/photo/photo-cache
+app/static/writing/writing-cache
 
 # nginx runtime files
 nginx/config
