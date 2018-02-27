@@ -122,7 +122,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 			if (success) {
 				if(usrData.email) {
 					var mailFirstName = (usrData.firstName ? usrData.firstName : '');
-					var mailLastName = (usrData.firstLast ? usrData.LastName : '');
+					var mailLastName = (usrData.lastName ? usrData.LastName : '');
 					var mailCompany = (usrData.company ? usrData.company : '');
 					var mailSubject = (usrData.subject ? usrData.subject : 'No Subject');
 					var mailMessage = (usrData.message ? usrData.message : 'No Message');
