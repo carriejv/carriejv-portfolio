@@ -99,6 +99,15 @@ module.exports.makeRouter = function(langFile, langForce) {
 
         var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private, captchaData) : null);
 
+        var baseResponseData = {
+            lang: req.langData,
+            rootDir: rootDir,
+            activePage: 'contact',
+            bg: '6',
+            rc: (rc ? rc.toHTML() : null),
+            usrData: usrData
+        };
+
         // This code is only used in dev environments in the abscence of secrets.
         if(!rc) {
             rc = {}
@@ -118,7 +127,7 @@ module.exports.makeRouter = function(langFile, langForce) {
                     var mailSubject = (usrData.subject ? usrData.subject : 'No Subject');
                     var mailMessage = (usrData.message ? usrData.message : 'No Message');
                     
-                    let mailOptions = {
+                    var mailOptions = {
                         from: '"Carrie Vrtis" <noreply@carrievrtis.com>',
                         to: 'cjvrtis@gmail.com',
                         subject: mailSubject,
@@ -142,26 +151,36 @@ module.exports.makeRouter = function(langFile, langForce) {
 
                         transporter.sendMail(mailOptions, (error, info) => {
                             if (error) {
-                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
+                                var responseData = baseResponseData;
+                                responseData.response = 'fail';
+                                res.render(path.resolve('views/contact'), responseData);
                             }
                             else {
-                                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'confirm' });
+                                var responseData = baseResponseData;
+                                responseData.response = 'confirm';
+                                res.render(path.resolve('views/contact'), responseData);
                             }
                         });
                     
                     }
                     else {
-                        res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'fail', usrData: usrData });
+                        var responseData = baseResponseData;
+                        responseData.response = 'fail';
+                        res.render(path.resolve('views/contact'), responseData);
                         //res.setHeader('Content-Type', 'application/json');
                         //res.send(JSON.stringify(mailOptions));
                     }
                 }
                 else {
-                    res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'email', usrData: usrData });
+                    var responseData = baseResponseData;
+                    responseData.response = 'email';
+                    res.render(path.resolve('views/contact'), responseData);
                 }
             }
             else {
-                res.render(path.resolve('views/contact'), { lang: req.langData, rootDir: rootDir, activePage: 'contact', bg: '6', rc: rc.toHTML(), response: 'captcha', usrData: usrData });
+                var responseData = baseResponseData;
+                responseData.response = 'captcha';
+                res.render(path.resolve('views/contact'), responseData);
             }
         });
     });
