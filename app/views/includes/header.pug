@@ -1,12 +1,35 @@
 doctype html
 html(lang=lang.lang)
 	head
-		title #{(activePage && activePage !== 'home' ? 'Carrie Vrtis - ' + lang[activePage].name : 'Carrie Vrtis')}
+		-
+			var title = 'Carrie Vrtis'
+			if(projectData && projectData.name) {
+				title += ' - ' + projectData.name;
+			}
+			else if(activePage && activePage !== 'home') {
+				title += ' - ' + activePage.charAt(0).toUpperCase() + activePage.slice(1);
+			}
+		title #{title}
 		meta(charset='utf-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
 		meta(name='description' content=lang.meta.description)
 		meta(name='author' content='Carrie Vrtis')
 		meta(name='google-site-verification' content='vtyGpJuu7N5W-8pVcVZ2MfSaAW47GbBJ8tq4vTgXWJ0')
+		meta(property='og:type' content='website')
+		meta(property='og:site_name' content='Carrie Vrtis')
+		-
+			var imgUrl = 'https://www.carrievrtis.com/static/media/cv-ogimg.jpg';
+			var contentUrl = 'https://www.carrievrtis.com' + rootDir + activePage;
+			if(projectData && projectData.contentType === 'img') {
+				imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '720');
+				contentUrl += '/' + activeCat + '/' + activeProj;
+			}
+		meta(property='og:title' content=title)
+		meta(property='og:url' content=contentUrl)
+		meta(property='og:image' content=imgUrl)
+		meta(property='og:description' content=lang.meta.description)
+		meta(name='twitter:card' content='summary_large_image')
+		meta(name='twitter:image:alt' content='Carrie Vrtis Website Banner')
 		link(rel='icon' type='image/png' href='/static/favicon.png')
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 		link(rel='stylesheet' href='/static/css/global.min.css')
@@ -19,4 +42,3 @@ html(lang=lang.lang)
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'UA-108510984-3');
-</script>

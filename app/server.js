@@ -9,8 +9,6 @@ var cvPhotos = require('./lib/cvPhotos.js');
 
 var langFile = require('./lang/lang.json');
 
-var baseTitle = 'Carrie Vrtis';
-
 app.set('view engine', 'pug');
 
 var localeRouter = cvRouter.makeRouter(langFile);
