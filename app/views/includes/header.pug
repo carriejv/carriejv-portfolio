@@ -21,7 +21,7 @@ html(lang=lang.lang)
 			var imgUrl = 'https://www.carrievrtis.com/static/media/cv-ogimg.jpg';
 			var contentUrl = 'https://www.carrievrtis.com' + rootDir + activePage;
 			if(projectData && projectData.contentType === 'img') {
-				imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '720');
+				imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '1440');
 				contentUrl += '/' + activeCat + '/' + activeProj;
 			}
 		meta(property='og:title' content=title)
