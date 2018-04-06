@@ -180,18 +180,22 @@
 
 				var changeButtonBGs = function() {
 					// Slider is at the left limit.
-					if (slider.position().left >= 0) {
+					if (slider.position().left >= 0 && $('.project-nav-item-active').index() === 0) {
 						parent.find('.project-nav-btn-left').css('background-image', 'url("/static/media/buttons/dis-arrow-left.png")');
+						parent.find('.project-nav-btn-left').css('cursor', 'default');
 					}
 					else {
 						parent.find('.project-nav-btn-left').css('background-image', 'url("/static/media/buttons/arrow-left.png")');
+						parent.find('.project-nav-btn-left').css('cursor', 'pointer');
 					}
-					// Slider is at the right limit.
-					if (slider.position().left <= ctr.width() - slider.width() + 30) {
+					// Slider is at the right limit.'
+					if (slider.position().left <= ctr.width() - slider.width() + 30 && $('.project-nav-item-active').index() === $('.project-nav-item-active').parent().find('.project-nav-item').length - 1) {
 						parent.find('.project-nav-btn-right').css('background-image', 'url("/static/media/buttons/dis-arrow-right.png")');
+						parent.find('.project-nav-btn-right').css('cursor', 'default');
 					}
 					else {
 						parent.find('.project-nav-btn-right').css('background-image', 'url("/static/media/buttons/arrow-right.png")');
+						parent.find('.project-nav-btn-right').css('cursor', 'pointer');
 					}
 				};
 
