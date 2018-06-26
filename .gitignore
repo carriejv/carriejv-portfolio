@@ -63,6 +63,9 @@ typings/
 # super secret
 secrets
 
+# patch script
+upload.sh
+
 # static
 *.png
 *.jpg
