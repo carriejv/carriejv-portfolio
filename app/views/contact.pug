@@ -1,63 +1,64 @@
-include includes/header.pug
+doctype html
+html(lang=lang.lang)
+	include ../includes/header.pug
+	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+		include includes/nav.pug
+		div#content.container.flex-grow.scrollable-content
+			div.row.align-items-start.justify-content-center
+				div.col-10
+					div#contact-form-container.section
+						div.row.align-items-start.justify-content-center
+							h3 #{lang.contact.header}
+						hr
+						form#contact-form(name='contact-form' method='post' enctype='X-www-form-urlencoded')
+							if(response)
+								div#contact-response
+									case response
+										when 'confirm'
+											div#contact-confirm #{lang.contact.confirm}
+										when 'captcha'
+											div#contact-err #{lang.contact.err.captcha}
+										when 'email'
+											div#contact-err #{lang.contact.err.email}
+										when 'fail'
+											div#contact-err #{lang.contact.err.fail}
+										default
+											- break
+							input(type='hidden' name='redirect' val=rootDir + '/' + activePage)
+							div.form-row.form-group
+								div.col
+									label(for='contact-firstName') #{lang.contact.firstName}
+									input#contact-firstName.form-control(type='text' name='firstName' value=(usrData ? usrData.firstName : ''))
+								div.col
+									label(for='contact-lastName') #{lang.contact.lastName}
+									input#contact-lastName.form-control(type='text' name='lastName' value=(usrData ? usrData.lastName : ''))
+							div.form-row.form-group
+								div.col
+									label(for='contact-company') #{lang.contact.company}
+									input#contact-company.form-control(type='text' name='company' value=(usrData ? usrData.company : ''))
+							div.form-row.form-group
+								div.col
+									label(for='contact-email') #{lang.contact.email}
+									input#contact-email.form-control(required type='email' name='email' value=(usrData ? usrData.email : ''))
+							div.form-row.form-group
+								div.col
+									label(for='contact-subject') #{lang.contact.subject}
+									input#contact-subject.form-control(type='text' name='subject' value=(usrData ? usrData.subject : ''))
+							div.form-row.form-group
+								div.col
+									label(for='contact-message') #{lang.contact.message}
+									textarea#contact-message.form-control(name='message')
+										if(usrData)
+											| #{usrData.message}
+							div.form-row.form-group
+								div.col
+									div.form-check.form-check-inline
+										label(for='contact-sendCopy' style='width: auto !important;') #{lang.contact.sendCopy}
+										input#contact-sendCopy.form-control(type='checkbox' name='sendCopy' style='width: 3em !important;' checked=(usrData && usrData.sendCopy))
+							div.form-row.form-group.align-items-end
+								div.col
+									| !{rc}
+								div.col
+									input#contact-submit.form-control(type='submit' value='Send')
 
-body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
-	include includes/nav.pug
-	div#content.container.flex-grow.scrollable-content
-		div.row.align-items-start.justify-content-center
-			div.col-10
-				div#contact-form-container.section
-					div.row.align-items-start.justify-content-center
-						h3 #{lang.contact.header}
-					hr
-					form#contact-form(name='contact-form' method='post' enctype='X-www-form-urlencoded')
-						if(response)
-							div#contact-response
-								case response
-									when 'confirm'
-										div#contact-confirm #{lang.contact.confirm}
-									when 'captcha'
-										div#contact-err #{lang.contact.err.captcha}
-									when 'email'
-										div#contact-err #{lang.contact.err.email}
-									when 'fail'
-										div#contact-err #{lang.contact.err.fail}
-									default
-										- break
-						input(type='hidden' name='redirect' val=rootDir + '/' + activePage)
-						div.form-row.form-group
-							div.col
-								label(for='contact-firstName') #{lang.contact.firstName}
-								input#contact-firstName.form-control(type='text' name='firstName' value=(usrData ? usrData.firstName : ''))
-							div.col
-								label(for='contact-lastName') #{lang.contact.lastName}
-								input#contact-lastName.form-control(type='text' name='lastName' value=(usrData ? usrData.lastName : ''))
-						div.form-row.form-group
-							div.col
-								label(for='contact-company') #{lang.contact.company}
-								input#contact-company.form-control(type='text' name='company' value=(usrData ? usrData.company : ''))
-						div.form-row.form-group
-							div.col
-								label(for='contact-email') #{lang.contact.email}
-								input#contact-email.form-control(required type='email' name='email' value=(usrData ? usrData.email : ''))
-						div.form-row.form-group
-							div.col
-								label(for='contact-subject') #{lang.contact.subject}
-								input#contact-subject.form-control(type='text' name='subject' value=(usrData ? usrData.subject : ''))
-						div.form-row.form-group
-							div.col
-								label(for='contact-message') #{lang.contact.message}
-								textarea#contact-message.form-control(name='message')
-									if(usrData)
-										| #{usrData.message}
-						div.form-row.form-group
-							div.col
-								div.form-check.form-check-inline
-									label(for='contact-sendCopy' style='width: auto !important;') #{lang.contact.sendCopy}
-									input#contact-sendCopy.form-control(type='checkbox' name='sendCopy' style='width: 3em !important;' checked=(usrData && usrData.sendCopy))
-						div.form-row.form-group.align-items-end
-							div.col
-								| !{rc}
-							div.col
-								input#contact-submit.form-control(type='submit' value='Send')
-
-	include includes/footer.pug
+		include includes/footer.pug

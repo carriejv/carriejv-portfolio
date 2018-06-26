@@ -1,13 +1,15 @@
-include ../includes/header.pug
+doctype html
+html(lang=lang.lang)
+	include ../includes/header.pug
 
-body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
-	include ../includes/nav.pug
-	div#content.container.d-flex.align-items-center.justify-content-center.flex-grow
-		div.row.align-items-center.justify-content-center.flex-column
-			div#home-logo
-				img(src='/static/media/carrievrtis-logo.png' alt='Carrie Vrtis Logo')
-			div#error-text.text-shadow.text-center
-					h1.alight Error #{errorCode}
-					h2 #{lang.error[errorCode].message}
-					h3 #{lang.error[errorCode].instruction}
-	include ../includes/footer.pug
+	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+		include ../includes/nav.pug
+		div#content.container.d-flex.align-items-center.justify-content-center.flex-grow
+			div.row.align-items-center.justify-content-center.flex-column
+				div#home-logo
+					img(src='/static/media/carrievrtis-logo.png' alt='Carrie Vrtis Logo')
+				div#error-text.text-shadow.text-center
+						h1.alight Error #{errorCode}
+						h2 #{lang.error[errorCode].message}
+						h3 #{lang.error[errorCode].instruction}
+		include ../includes/footer.pug

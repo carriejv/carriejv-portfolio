@@ -1,44 +1,42 @@
-doctype html
-html(lang=lang.lang)
-	head
-		-
-			var title = 'Carrie Vrtis'
-			if(projectData && projectData.name) {
-				title += ' - ' + projectData.name;
-			}
-			else if(activePage && activePage !== 'home') {
-				title += ' - ' + activePage.charAt(0).toUpperCase() + activePage.slice(1);
-			}
-		title #{title}
-		meta(charset='utf-8')
-		meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		meta(name='description' content=lang.meta.description)
-		meta(name='author' content='Carrie Vrtis')
-		meta(name='google-site-verification' content='vtyGpJuu7N5W-8pVcVZ2MfSaAW47GbBJ8tq4vTgXWJ0')
-		meta(property='og:type' content='website')
-		meta(property='og:site_name' content='Carrie Vrtis')
-		-
-			var imgUrl = 'https://www.carrievrtis.com/static/media/cv-ogimg.jpg';
-			var contentUrl = 'https://www.carrievrtis.com' + rootDir + activePage;
-			if(projectData && projectData.contentType === 'img') {
-				imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '1440');
-				contentUrl += '/' + activeCat + '/' + activeProj;
-			}
-		meta(property='og:title' content=title)
-		meta(property='og:url' content=contentUrl)
-		meta(property='og:image' content=imgUrl)
-		meta(property='og:description' content=lang.meta.description)
-		meta(name='twitter:card' content='summary_large_image')
-		meta(name='twitter:image:alt' content='Carrie Vrtis Website Banner')
-		link(rel='icon' type='image/png' href='/static/favicon.png')
-		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
-		link(rel='stylesheet' href='/static/css/global.min.css')
-		script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
-		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
-		script(async src='https://www.googletagmanager.com/gtag/js?id=UA-108510984-3')
-		script.
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-108510984-3');
+head
+	-
+		var title = 'Carrie Vrtis'
+		if(projectData && projectData.name) {
+			title += ' - ' + projectData.name;
+		}
+		else if(activePage && activePage !== 'home') {
+			title += ' - ' + activePage.charAt(0).toUpperCase() + activePage.slice(1);
+		}
+	title #{title}
+	meta(charset='utf-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+	meta(name='description' content=lang.meta.description)
+	meta(name='author' content='Carrie Vrtis')
+	meta(name='google-site-verification' content='vtyGpJuu7N5W-8pVcVZ2MfSaAW47GbBJ8tq4vTgXWJ0')
+	meta(property='og:type' content='website')
+	meta(property='og:site_name' content='Carrie Vrtis')
+	-
+		var imgUrl = 'https://www.carrievrtis.com/static/media/cv-ogimg.jpg';
+		var contentUrl = 'https://www.carrievrtis.com' + rootDir + activePage;
+		if(projectData && projectData.contentType === 'img') {
+			imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '1440');
+			contentUrl += '/' + activeCat + '/' + activeProj;
+		}
+	meta(property='og:title' content=title)
+	meta(property='og:url' content=contentUrl)
+	meta(property='og:image' content=imgUrl)
+	meta(property='og:description' content=lang.meta.description)
+	meta(name='twitter:card' content='summary_large_image')
+	meta(name='twitter:image:alt' content='Carrie Vrtis Website Banner')
+	link(rel='icon' type='image/png' href='/static/favicon.png')
+	link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+	link(rel='stylesheet' href='/static/css/global.min.css')
+	script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+	script(async src='https://www.googletagmanager.com/gtag/js?id=UA-108510984-3')
+	script.
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-108510984-3');

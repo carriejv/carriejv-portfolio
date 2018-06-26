@@ -1,44 +1,45 @@
-include includes/header.pug
-
-body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
-	include includes/nav.pug
-	div#content.container.flex-grow.scrollable-content
-		div.row.align-items-start.justify-content-center
-			div.col-10.col-md-6.col-lg-5
-				div#about-profile
-					img(src='/static/media/profile.jpg' alt='A photo of Carrie Vrtis')
-				div#about-summary.section
-					h3.about-header #{lang.about.summary.name}
-					hr
-					each v in lang.about.summary.p
-						p #{v}
-			div.col-10.col-md-6.col-lg-5
-				div#about-tech.section
-					h3.about-header #{lang.about.tech.name}
-					hr
-					each v in lang.about.tech.list
-						div.about-tech-subheader #{v.name}
+doctype html
+html(lang=lang.lang)
+	include ../includes/header.pug
+	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+		include includes/nav.pug
+		div#content.container.flex-grow.scrollable-content
+			div.row.align-items-start.justify-content-center
+				div.col-10.col-md-6.col-lg-5
+					div#about-profile
+						img(src='/static/media/profile.jpg' alt='A photo of Carrie Vrtis')
+					div#about-summary.section
+						h3.about-header #{lang.about.summary.name}
+						hr
+						each v in lang.about.summary.p
+							p #{v}
+				div.col-10.col-md-6.col-lg-5
+					div#about-tech.section
+						h3.about-header #{lang.about.tech.name}
+						hr
+						each v in lang.about.tech.list
+							div.about-tech-subheader #{v.name}
+							div.flex-spacing-container
+								each w in v.sublist
+									div.about-tech-item
+										| &#8226;&nbsp;
+										| #{w}
+										| &nbsp;
+					div#about-social.section
+						h3.about-header #{lang.about.social.name}
+						hr
 						div.flex-spacing-container
-							each w in v.sublist
-								div.about-tech-item
-									| &#8226;&nbsp;
-									| #{w}
-									| &nbsp;
-				div#about-social.section
-					h3.about-header #{lang.about.social.name}
-					hr
-					div.flex-spacing-container
-						a.about-social-link(href='https://www.facebook.com/cjvrtis' target='_blank')
-							img.about-social-icon(src='/static/media/social/facebook.png' alt='Facebook')
-						a.about-social-link(href='https://twitter.com/BRBCarrying' target='_blank')
-							img.about-social-icon(src='/static/media/social/twitter.png' alt='Twitter')
-						a.about-social-link(href='https://www.linkedin.com/in/carrie-vrtis-aa4404119/' target='_blank')
-							img.about-social-icon(src='/static/media/social/linkedin.png' alt='LinkedIn')
-						a.about-social-link(href='https://github.com/carriejv' target='_blank')
-							img.about-social-icon(src='/static/media/social/github.png' alt='Github')
-					div.flex-spacing-container
-						a(href='/static/media/resume.pdf' target='_blank')
-							| #{lang.about.social.resume}
-							| &raquo;
-				
-	include includes/footer.pug
+							a.about-social-link(href='https://www.facebook.com/cjvrtis' target='_blank')
+								img.about-social-icon(src='/static/media/social/facebook.png' alt='Facebook')
+							a.about-social-link(href='https://twitter.com/BRBCarrying' target='_blank')
+								img.about-social-icon(src='/static/media/social/twitter.png' alt='Twitter')
+							a.about-social-link(href='https://www.linkedin.com/in/carrie-vrtis-aa4404119/' target='_blank')
+								img.about-social-icon(src='/static/media/social/linkedin.png' alt='LinkedIn')
+							a.about-social-link(href='https://github.com/carriejv' target='_blank')
+								img.about-social-icon(src='/static/media/social/github.png' alt='Github')
+						div.flex-spacing-container
+							a(href='/static/media/resume.pdf' target='_blank')
+								| #{lang.about.social.resume}
+								| &raquo;
+
+		include includes/footer.pug
