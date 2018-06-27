@@ -12,7 +12,7 @@ services:
     networks:
       - backend
     environment:
-      - SERVER_LISTEN_PORT=8080
+      - PORT=8080
     secrets:
       - recaptcha
       - email
