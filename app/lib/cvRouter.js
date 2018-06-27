@@ -8,18 +8,7 @@ var locale = require('locale');
 var langSupported = ['en', 'es'];
 var langDefault = 'en';
 
-var dockerSecrets;
-var parsedSecrets = {};
-try {
-	dockerSecrets = require('docker-secrets');
-	for(var x of Object.keys(dockerSecrets)) {
-		parsedSecrets[x] = JSON.parse(dockerSecrets[x]);
-	}
-}
-catch(ex) {
-	dockerSecrets = null;
-	parsedSecrets = null;
-}
+var dockerSecrets = require('docker-swarm-secrets').readSecretsSync();
 var recaptcha = require('node-recaptcha2').Recaptcha;
 var bodyParser = require('body-parser');
 
@@ -70,7 +59,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 	});
 
 	router.get("/contact", (req, res) => {
-		var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private) : null);
+		var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private) : null);
 		res.render(path.resolve('views/contact'), {
 			lang: req.langData,
 			rootDir: rootDir,
@@ -138,14 +127,14 @@ module.exports.makeRouter = function(langFile, langForce) {
 					if(usrData.sendCopy) {
 						mailOptions.to = mailOptions.to + ', ' + usrData.email;
 					}
-					if(parsedSecrets) {
+					if(dockerSecrets) {
 						var transporter = nodemailer.createTransport({
 							host: 'carrievrtis.com',
 							port: 25,
 							secure: false,
 							auth: {
-								user: parsedSecrets.email.user,
-								pass: parsedSecrets.email.password
+								user: dockerSecrets.email.user,
+								pass: dockerSecrets.email.password
 							},
 						});
 
