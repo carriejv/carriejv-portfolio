@@ -23,6 +23,7 @@ app.use('/en', enRouter);
 app.use('/es', esRouter);
 app.use('/', localeRouter);
 
-app.listen(process.env.SERVER_LISTEN_PORT, () => {
-	console.log("Server listening on " + process.env.SERVER_LISTEN_PORT);
+let port = process.env.PORT || 8080;
+app.listen(port, () => {
+	console.log("Server listening on " + port);
 });
