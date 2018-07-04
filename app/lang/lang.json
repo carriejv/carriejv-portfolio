@@ -25,24 +25,34 @@
                "p": [
                    "I produce websites and multimedia packages that combine text, photos, videos, and interactive elements.",
                    "I have worked in web development for six years on a wide array of projects - commercial, educational, and entertainment.",
-                   "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career.",
-                   "My photography has been recognized by Magnum Photos, an international photography cooperative.",
-                   "I'm also experienced in writing SEO-friendly copy and social media marketing for my content.",
-                   "In my free time I do pretty much all the same things (honestly). I just break things more often trying to do something interesting."
+                   "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career. I believe that open communication is one of the greatest tools we have for addressing social problems, and do my best to ensure my work can reach as many people as possible.",
+                   "My photography has been recognized by Magnum Photos, an international photography cooperative. It has also appeared in a handful of newspapers and online publications.",
+                   "I'm also experienced in writing SEO-friendly copy and social media marketing for my content. In addition to business-related writing, I write creative fiction (mostly short stories) as a hobby.",
+                   "My free time is mostly spent traveling around the Pacific Northwest (and beyond) to see friends and take photos, or on my nerdier hobbies of breaking computers in interesting ways and Twitch streaming."
                ]
             },
             "tech": {
                 "name": "Technology",
                 "list": [
                     {
-                        "name": "Front End Web",
+                        "name": "Languages",
                         "sublist": [
-                            "HTML6",
+                            "HTML",
+                            "CSS",
+                            "JavaScript",
+                            "NodeJS",
+                            "PHP",
+                            "Java",
+                            "Python"
+                        ]
+                    },
+                    {
+                        "name": "Front End Dev",
+                        "sublist": [
                             "Jade/Pug",
                             "Twig",
-                            "CSS3",
                             "Sass/Less",
-                            "Javascript ES8",
+                            "jQuery",
                             "Bootstrap",
                             "AngularJS"
                         ]
@@ -50,16 +60,15 @@
                     {
                         "name": "Back End Web",
                         "sublist": [
-                            "Java",
-                            "Python",
-                            "PHP",
-                            "Symfony",
-                            "NodeJS",
                             "Express",
                             "Vert.x",
+                            "Symfony",
                             "SQL/MySQL/SQLite",
                             "MongoDB",
-                            "Firebase"
+                            "Firebase",
+                            "Docker",
+                            "Google Cloud",
+                            "Amazon S3 / AWS"
                         ]
                     },
                     {
@@ -81,6 +90,15 @@
                             "Illustrator",
                             "Photoshop",
                             "Premiere"
+                        ]
+                    },
+                    {
+                        "name": "OS & Networking",
+                        "sublist": [
+                            "Windows",
+                            "Mac OS X",
+                            "Linux (RHEL / Fedora)",
+                            "Linux Admin & Networking"
                         ]
                     },
                     {
@@ -171,73 +189,99 @@
                 "p": [
                     "Produzco sitios del web y paquetes de texto, fotos, videos, y funciones interactivas.",
                     "He trabajado en el diseño web por seis años en un gran variedad de projectos para comercio, educación, y entretenimiento.",
-                    "He diseñado para audiencias con necesidades especiales y problemas de accesibilidad por un gran parte de mi carrera.",
-                    "Mi fotografía fue reconocido por Magnum Photos, un cooperativa de fotografía internacional.",
-                    "Tengo experiencia en la optimización para buscadores y anunciar de las redes sociales.",
-                    "En mi tiempo libre hago casi todas las mismas cosas. Simplemente rompo las cosas más a menudo intentando algo interesante."
+                    "He diseñado para audiencias con necesidades especiales y problemas de accesibilidad por un gran parte de mi carrera. Creo que la comunicación es una de las mejores herramientas que tenemos para abordar los problemas sociales, y hago todo lo posible para asegurar que mi trabajo sea comprensible para todos.",
+                    "Mi fotografía fue reconocido por Magnum Photos, un cooperativa de fotografía internacional. También ha aparecido en varios periódicos y publicaciones en línea.",
+                    "Tengo experiencia en la optimización para buscadores y anunciar de las redes sociales. Además de la publicidad, escribo ficción creativa (principalmente cuentos cortos) como pasatiempo.",
+                    "Mi tiempo libre se dedica principalmente a viajar por el noroeste (y más allá) para ver amigos y tomar fotos, o en mis otros pasatiempos de romper computadoras y el streaming en Twitch."
                 ]
              },
              "tech": {
                  "name": "Tecnología",
-                 "list": [
-                     {
-                         "name": "Código de Interfaz",
-                         "sublist": [
-                             "HTML6",
-                             "Jade/Pug",
-                             "Twig",
-                             "CSS3",
-                             "Sass/Less",
-                             "Javascript ES8",
-                             "Bootstrap",
-                             "AngularJS"
-                         ]
-                     },
-                     {
-                         "name": "Código de Servidor",
-                         "sublist": [
-                             "Java",
-                             "Python",
-                             "PHP",
-                             "Symfony",
-                             "NodeJS",
-                             "Express",
-                             "Vert.x",
-                             "SQL/MySQL/SQLite",
-                             "MongoDB",
-                             "Firebase"
-                         ]
-                     },
-                     {
-                         "name": "Útiles",
-                         "sublist": [
-                             "Git",
-                             "Svn",
-                             "NPM",
-                             "Yarn",
-                             "Bower",
-                             "Grunt",
-                             "Gradle"
-                         ]
-                     },
-                     {
-                         "name": "Diseño",
-                         "sublist": [
-                             "MS Office",
-                             "Illustrator",
-                             "Photoshop",
-                             "Premiere"
-                         ]
-                     },
-                     {
-                         "name": "Cámaras",
-                         "sublist": [
-                             "Sony α7-II (Primario)",
-                             "Fuji HS35EXR (Reserva)"
-                         ]
-                     }
-                 ]
-             },
+                 "p": [
+                   "I produce websites and multimedia packages that combine text, photos, videos, and interactive elements.",
+                   "I have worked in web development for six years on a wide array of projects - commercial, educational, and entertainment.",
+                   "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career. I believe that communication is one of the greatest tools we have for addressing social problems, and do my best to ensure my work can reach as many people as possible.",
+                   "My photography has been recognized by Magnum Photos, an international photography cooperative. It has also appeared in a handful of newspapers and online publications.",
+                   "I'm also experienced in writing SEO-friendly copy and social media marketing for my content. In addition to business-related writing, I write creative fiction (mostly short stories) as a hobby.",
+                   "My free time is mostly spent traveling around the Pacific Northwest (and beyond) to see friends and take photos, or on my nerdier hobbies of breaking computers in interesting ways and Twitch streaming."
+                ],
+                "list": [
+                    {
+                        "name": "Lenguajes de Programación",
+                        "sublist": [
+                            "HTML",
+                            "CSS",
+                            "JavaScript",
+                            "NodeJS",
+                            "PHP",
+                            "Java",
+                            "Python"
+                        ]
+                    },
+                    {
+                        "name": "Código de Interfaz",
+                        "sublist": [
+                            "Jade/Pug",
+                            "Twig",
+                            "Sass/Less",
+                            "jQuery",
+                            "Bootstrap",
+                            "AngularJS"
+                        ]
+                    },
+                    {
+                        "name": "Código de Servidor",
+                        "sublist": [
+                            "Express",
+                            "Vert.x",
+                            "Symfony",
+                            "SQL/MySQL/SQLite",
+                            "MongoDB",
+                            "Firebase",
+                            "Docker",
+                            "Google Cloud",
+                            "Amazon S3 / AWS"
+                        ]
+                    },
+                    {
+                        "name": "Útiles",
+                        "sublist": [
+                            "Git",
+                            "Svn",
+                            "NPM",
+                            "Yarn",
+                            "Bower",
+                            "Grunt",
+                            "Gradle"
+                        ]
+                    },
+                    {
+                        "name": "Diseño",
+                        "sublist": [
+                            "MS Office Suite",
+                            "Illustrator",
+                            "Photoshop",
+                            "Premiere"
+                        ]
+                    },
+                    {
+                        "name": "Sistemas y Interconexión",
+                        "sublist": [
+                            "Windows",
+                            "Mac OS X",
+                            "Linux (RHEL / Fedora)",
+                            "Linux Interconexión"
+                        ]
+                    },
+                    {
+                        "name": "Cámaras",
+                        "sublist": [
+                            "Sony α7-II (Primary)",
+                            "Fuji HS35EXR (Backup)"
+                        ]
+                    }
+                ]
+            },
              "social": {
                  "name": "Enlaces",
                  "resume": "Mira mi currículum"

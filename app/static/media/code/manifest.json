@@ -20,9 +20,9 @@
                 },
                 "url": "https://co-resource-map.firebaseapp.com",
                 "tech": [
-                    "HTML5",
-                    "CSS3",
-                    "Javascript ES6",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
                     "jQuery",
                     "Google Maps API",
                     "TriMet API",
@@ -48,9 +48,9 @@
                     "es": "Entre con demo@carrievrtis.com | password."
                 },
                 "tech": [
-                    "HTML5",
-                    "CSS3",
-                    "Javascript ES6",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
                     "jQuery",
                     "Google Maps API",
                     "TriMet API",
@@ -72,9 +72,9 @@
                 },
                 "url": "http://www.carrievrtis.com",
                 "tech": [
-                    "HTML6",
-                    "CSS3",
-                    "Javascript ES8",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
                     "jQuery",
                     "Bootstrap",
                     "Pug",
