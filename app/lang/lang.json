@@ -58,7 +58,7 @@
                         ]
                     },
                     {
-                        "name": "Back End Web",
+                        "name": "Back End Dev",
                         "sublist": [
                             "Express",
                             "Vert.x",
