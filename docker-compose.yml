@@ -9,8 +9,6 @@ services:
       - 208.67.222.222
     ports:
       - "8080:8080"
-    networks:
-      - backend
     environment:
       - PORT=8080
     secrets:
@@ -20,7 +18,7 @@ services:
       - "./app:/app"
     working_dir: /app
     deploy:
-      replicas: 4
+      replicas: 2
       restart_policy:
         condition: on-failure
         delay: 5s
@@ -32,6 +30,3 @@ secrets:
     file: ./secrets/recaptcha.json
   email:
     file: ./secrets/email.json
-
-networks:
-  backend:
