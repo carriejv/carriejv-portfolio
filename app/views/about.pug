@@ -9,16 +9,16 @@ html(lang=lang.lang)
 					div#about-profile
 						img(src='/static/media/profile.jpg' alt='A photo of Carrie Vrtis')
 					div#about-summary.section
-						h3.about-header #{lang.about.summary.name}
+						h3.text-center #{lang.about.summary.name}
 						hr
 						each v in lang.about.summary.p
 							p #{v}
 				div.col-10.col-md-6.col-lg-5
 					div#about-tech.section
-						h3.about-header #{lang.about.tech.name}
+						h3.text-center #{lang.about.tech.name}
 						hr
 						each v in lang.about.tech.list
-							div.about-tech-subheader #{v.name}
+							div.text-bold #{v.name}
 							div.flex-spacing-container
 								each w in v.sublist
 									div.about-tech-item
@@ -26,7 +26,7 @@ html(lang=lang.lang)
 										| #{w}
 										| &nbsp;
 					div#about-social.section
-						h3.about-header #{lang.about.social.name}
+						h3.text-center #{lang.about.social.name}
 						hr
 						div.flex-spacing-container
 							a.about-social-link(href='https://www.facebook.com/cjvrtis' target='_blank')

@@ -26,7 +26,7 @@ html(lang=lang.lang)
 			//- Project Description
 			div.row.align-items-start.justify-content-center
 				div.col-12.col-md-4.col-xl-3
-					div#project-description.section
+					div#project-description.section.w-100
 						h2.alight #{projectData.name}
 						if (projectData.subtitle && projectData.subtitle.en)
 							h3.adark #{(projectData.subtitle[lang.lang] ? projectData.subtitle[lang.lang] : projectData.subtitle.en)}
