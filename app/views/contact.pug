@@ -43,7 +43,7 @@ html(lang=lang.lang)
 							div.form-row.form-group
 								div.col
 									label(for='contact-subject') #{lang.contact.subject}
-									input#contact-subject.form-control(type='text' name='subject' value=(usrData ? usrData.subject : ''))
+									input#contact-subject.form-control(type='text' name='subject' value=(usrData ? usrData.subject : (subject ? subject : '')))
 							div.form-row.form-group
 								div.col
 									label(for='contact-message') #{lang.contact.message}

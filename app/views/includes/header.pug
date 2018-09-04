@@ -22,10 +22,14 @@ head
 			imgUrl = 'https://www.carrievrtis.com' + projectData.content.replace('%scale', '1440');
 			contentUrl += '/' + activeCat + '/' + activeProj;
 		}
+		var ogDesc = lang.meta.description;
+		if(projectData) {
+			ogDesc = projectData.name + ' by Carrie Vrtis (' + projectData.subtitle[lang.lang] + '). ' + ogDesc;
+		}
 	meta(property='og:title' content=title)
 	meta(property='og:url' content=contentUrl)
 	meta(property='og:image' content=imgUrl)
-	meta(property='og:description' content=lang.meta.description)
+	meta(property='og:description' content=ogDesc)
 	meta(name='twitter:card' content='summary_large_image')
 	meta(name='twitter:image:alt' content='Carrie Vrtis Website Banner')
 	link(rel='icon' type='image/png' href='/static/favicon.png')

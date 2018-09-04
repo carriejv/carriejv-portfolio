@@ -127,7 +127,9 @@
         },
         "photo": {
             "name": "Photos",
-            "prints": "Prints available on Redbubble."
+            "prints": "Buy prints on Redbubble.",
+            "license": "Buy a commercial license.",
+            "hd": "View in HD."
         },
         "writing": {
             "name": "Writing"
@@ -299,7 +301,9 @@
         },
         "photo": {
             "name": "Fotos",
-            "prints": "Compre impresas."
+            "prints": "Compre impresas.",
+            "license": "Obtenga una licencia comercial.",
+            "hd": "Mírelo en HD."
         },
         "writing": {
             "name": "Escritura"

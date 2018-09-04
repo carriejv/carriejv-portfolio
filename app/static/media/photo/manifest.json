@@ -54,20 +54,52 @@
                     "ISO 250"
                 ]
             },
-            "rockies-2": {
-                "name": "Rocky Mountain National Park",
+            "seal-rock": {
+                "name": "Seal Rock",
+                "subtitle": {
+                    "en": "2017"
+                },
+                "contentType": "img",
+                "content": "/static/media/photo/photo-cache/%scale/seal-rock.jpg",
+                "prints": "https://www.redbubble.com/people/brbcarrying/works/28582518-breaking-wave-at-seal-rock-oregon?asc=u&p=photographic-print",
+                "tech": [
+                    "Sony α7-II",
+                    "f14.0",
+                    "1/50",
+                    "240mm",
+                    "ISO 100"
+                ]
+            },
+            "redwood-canopy": {
+                "name": "Redwood Canopy",
                 "subtitle": {
                     "en": "2018"
                 },
                 "contentType": "img",
-                "content": "/static/media/photo/photo-cache/%scale/rockies-2.jpg",
-                "prints": "https://www.redbubble.com/people/brbcarrying/works/31165662-rocky-mountain-national-park?asc=u&p=photographic-print",
+                "content": "/static/media/photo/photo-cache/%scale/redwood-canopy.jpg",
+                "prints": "https://www.redbubble.com/people/brbcarrying/works/33693884-redwood-canopy?asc=u&p=photographic-print",
                 "tech": [
                     "Sony α7-II",
-                    "f8.0",
-                    "1/640",
+                    "f16.0",
+                    "1/50",
                     "24mm",
-                    "ISO 250"
+                    "ISO 320"
+                ]
+            },
+            "fallen-redwood": {
+                "name": "Fallen Redwood",
+                "subtitle": {
+                    "en": "2018"
+                },
+                "contentType": "img",
+                "content": "/static/media/photo/photo-cache/%scale/fallen-redwood.jpg",
+                "prints": "https://www.redbubble.com/people/brbcarrying/works/33693909-fallen-redwood?asc=u&p=photographic-print",
+                "tech": [
+                    "Sony α7-II",
+                    "f4.5",
+                    "1/8",
+                    "50mm",
+                    "ISO 200"
                 ]
             },
             "17-mile-drive": {
@@ -81,22 +113,6 @@
                 "tech": [
                     "Sony α7-II",
                     "f16.0",
-                    "1/50",
-                    "240mm",
-                    "ISO 100"
-                ]
-            },
-            "seal-rock": {
-                "name": "Seal Rock",
-                "subtitle": {
-                    "en": "2017"
-                },
-                "contentType": "img",
-                "content": "/static/media/photo/photo-cache/%scale/seal-rock.jpg",
-                "prints": "https://www.redbubble.com/people/brbcarrying/works/28582518-breaking-wave-at-seal-rock-oregon?asc=u&p=photographic-print",
-                "tech": [
-                    "Sony α7-II",
-                    "f14.0",
                     "1/50",
                     "240mm",
                     "ISO 100"
@@ -195,6 +211,22 @@
                     "1/250",
                     "150mm",
                     "ISO 200"
+                ]
+            },
+            "rockies-2": {
+                "name": "Rocky Mountain National Park",
+                "subtitle": {
+                    "en": "2018"
+                },
+                "contentType": "img",
+                "content": "/static/media/photo/photo-cache/%scale/rockies-2.jpg",
+                "prints": "https://www.redbubble.com/people/brbcarrying/works/31165662-rocky-mountain-national-park?asc=u&p=photographic-print",
+                "tech": [
+                    "Sony α7-II",
+                    "f8.0",
+                    "1/640",
+                    "24mm",
+                    "ISO 250"
                 ]
             },
             "maui-beach": {

@@ -14,8 +14,9 @@
 			});
 		});
 		$('[data-img]').each(function() {
-			var img = $('<img />').appendTo(this);
-			img.attr('src', $(this).attr('data-img').replace('%scale', $(window).width()));
+			var img = $('<img alt="' + $('#project-description').find('h2').html() + '" />').appendTo(this);
+			var width = ($(window).width() && $(window).width() < 1920 ? $(window).width() : 1920);
+			img.attr('src', $(this).attr('data-img').replace('%scale', width));
 		});
 		// Set up sliders.
 		adjustSliders();

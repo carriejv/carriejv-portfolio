@@ -65,6 +65,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 			rootDir: rootDir,
 			activePage: 'contact',
 			bg: '6',
+			subject: req.query.subject,
 			rc: (rc ? rc.toHTML() : null)
 		});
 	});

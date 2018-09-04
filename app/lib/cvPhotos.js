@@ -6,7 +6,7 @@ var fs = require('fs');
 var ms = require('ms');
 var path = require('path');
 
-var availableWidths = [1920, 1440, 1200, 960, 768, 576, 256];
+var availableWidths = [4096, 1920, 1440, 1200, 960, 768, 576, 256];
 
 router.get("/:width/:img", (req, res) => {
 

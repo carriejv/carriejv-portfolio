@@ -11,7 +11,8 @@ html(lang=lang.lang)
 					h1 #{lang.home.intro.start}
 						span.alight #{lang.home.intro.end}
 					h2 #{lang.home.subtext.start}
-						span#swaptext.adark #{lang.home.subtext.end[0]}
+						span.adark(id='swaptext-' + lang.lang) #{lang.home.subtext.end[0]}
 					h3
 						a(href=rootDir + 'about') #{lang.home.aboutlink} &raquo;
 		include ./includes/footer.pug
+		script(src='/static/js/index.js')

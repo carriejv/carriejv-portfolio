@@ -40,20 +40,10 @@ html(lang=lang.lang)
 								| #{projectData.url}
 						if (projectData.urlInstruction && projectData.urlInstruction.en)
 							div.img-caption #{(projectData.urlInstruction[lang.lang] ? projectData.urlInstruction[lang.lang] : projectData.urlInstruction.en)}
-						if (projectData.contentType === 'img' && projectData.content.indexOf('%scale') !== -1)
-							a(href=projectData.content.replace('%scale', '4096') target='_blank')
-								| #{lang.photo.hd}
-								| &raquo;
-							hr.project-hr
 						if (projectData.prints)
 							a(href=projectData.prints target='_blank')
 								| #{lang.photo.prints}
 								| &raquo;
-							hr.project-hr
-							a(href=rootDir + 'contact?subject=' + encodeURIComponent('Photo Licensing: ' + projectData.name + ' (' + activeProj + ')'))
-								| #{lang.photo.license}
-								| &raquo;
-							hr.project-hr
 						if (projectData.pdf)
 							a(href=projectData.pdf target='_blank')
 								| #{lang.design.pdf}
