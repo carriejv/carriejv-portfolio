@@ -6,7 +6,7 @@
 	var textArr = window.subheaders;
 	var textIndex = 0;
 	var typingSpeed = 80;
-	var waitTime = 1000;
+	var waitTime = 8000;
 	var isTyping = false;
 	var charIndex, textInterval, textTimeout;
 
