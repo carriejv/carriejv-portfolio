@@ -129,6 +129,14 @@ img {
   margin-bottom: 8px;
 }
 
+.hidden {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 /* Navbar */
 #nav-container {
   z-index: 999;
@@ -170,6 +178,60 @@ img {
 #home-text,
 #error-text {
   font: 600 1rem/1.2 "Josefin Sans", "Open Sans", sans-serif;
+}
+
+#home-subtext {
+  height: 5.2rem;
+}
+
+#typing-text-ctr {
+  position: relative;
+  height: 0.83em;
+}
+
+#typing-spacer {
+  display: none;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49.99% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99.99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49.99% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99.99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  -webkit-animation: blink 1.2s linear infinite;
+          animation: blink 1.2s linear infinite;
 }
 
 /* About Page */
@@ -327,6 +389,9 @@ img {
   #home-logo {
     width: 256px;
   }
+  #home-subtext {
+    height: auto;
+  }
   h1 {
     font-size: 2.2rem;
   }
@@ -345,6 +410,14 @@ img {
   #home-text {
     text-align: left !important;
     padding-left: 1rem;
+  }
+  #typing-text {
+    position: absolute;
+    width: 9000px;
+    text-align: left !important;
+  }
+  #typing-spacer {
+    display: inline-block;
   }
   #project-tech-d {
     margin-top: 8px;

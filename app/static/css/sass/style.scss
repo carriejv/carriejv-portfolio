@@ -126,6 +126,11 @@ img {
     margin-bottom: 8px;
 }
 
+.hidden {
+    opacity: 0;
+    user-select: none;
+}
+
 /* Navbar */
 
 #nav-container {
@@ -168,6 +173,41 @@ img {
 #home-text,
 #error-text {
     font: 600 1rem/1.2 $accent-font-stack;
+}
+
+#home-subtext {
+    height: 5.2rem;
+}
+
+#typing-text-ctr {
+    position: relative;
+    height: 0.83em;
+}
+
+#typing-spacer {
+    display: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49.99% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    99.99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 1.2s linear infinite;
 }
 
 /* About Page */
@@ -325,6 +365,10 @@ img {
         width: 256px;
     }
 
+    #home-subtext {
+        height: auto;
+    }
+
     h1 {
         font-size: 2.2rem;
     }
@@ -347,6 +391,16 @@ img {
     #home-text {
         text-align: left !important;
         padding-left: 1rem;
+    }
+
+    #typing-text {
+        position: absolute;
+        width: 9000px;
+        text-align: left !important;
+    }
+
+    #typing-spacer {
+        display: inline-block
     }
 
     #project-tech-d {

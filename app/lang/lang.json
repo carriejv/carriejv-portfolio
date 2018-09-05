@@ -13,7 +13,12 @@
             "subtext": {
                 "start": "I am ",
                 "end": [
-                    "a digital media designer."
+                    "a digital media designer.",
+                    "a full stack web developer.",
+                    "a photographer.",
+                    "a multimedia content creator.",
+                    "a digital marketing guru.",
+                    "a short story author."
                 ]
             },
             "aboutlink": "See More"
@@ -127,8 +132,8 @@
         },
         "photo": {
             "name": "Photos",
-            "prints": "Buy prints on Redbubble.",
-            "license": "Buy a commercial license.",
+            "prints": "Buy prints online.",
+            "license": "Commercial licensing.",
             "hd": "View in HD."
         },
         "writing": {
@@ -178,8 +183,13 @@
             },
             "subtext": {
                 "start": "Soy una ",
-                "end": [
-                    "diseñadora de los medios digitales."
+                "end":  [
+                    "diseñadora de los medios digitales.",
+                    "programadora de sitios web.",
+                    "fotógrafa.",
+                    "creadora de multimedia.",
+                    "experta en publicidad en línea.",
+                    "autora del cuentos."
                 ]
             },
             "aboutlink": "Vea Más"

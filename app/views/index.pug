@@ -10,9 +10,16 @@ html(lang=lang.lang)
 				div#home-text.text-shadow.text-center
 					h1 #{lang.home.intro.start}
 						span.alight #{lang.home.intro.end}
-					h2 #{lang.home.subtext.start}
-						span.adark(id='swaptext-' + lang.lang) #{lang.home.subtext.end[0]}
+					div#home-subtext
+						h2 #{lang.home.subtext.start}
+							div#typing-text-ctr.d-inline-block.adark
+								div#typing-text
+									span#typing-contents #{lang.home.subtext.end[0]}
+							div#typing-spacer.adark.hidden.d-md-none #{lang.home.subtext.end[0]}
 					h3
 						a(href=rootDir + 'about') #{lang.home.aboutlink} &raquo;
 		include ./includes/footer.pug
+		- subheadersString = JSON.stringify(lang.home.subtext.end);
+		script.
+			window.subheaders = !{subheadersString};
 		script(src='/static/js/index.js')
