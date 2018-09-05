@@ -24,7 +24,7 @@ head
 		}
 		var ogDesc = lang.meta.description;
 		if(projectData) {
-			ogDesc = projectData.name + ' by Carrie Vrtis (' + projectData.subtitle[lang.lang] + '). ' + ogDesc;
+			ogDesc = projectData.name + ' by Carrie Vrtis (' + projectData.subtitle[lang.lang] || projectData.subtitle + '). ' + ogDesc;
 		}
 	meta(property='og:title' content=title)
 	meta(property='og:url' content=contentUrl)
