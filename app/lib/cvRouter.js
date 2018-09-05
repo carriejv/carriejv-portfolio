@@ -87,7 +87,7 @@ module.exports.makeRouter = function(langFile, langForce) {
 			response: req.body['g-recaptcha-response']
 		};
 
-		var rc = (parsedSecrets ? new recaptcha(parsedSecrets.recaptcha.public, parsedSecrets.recaptcha.private, captchaData) : null);
+		var rc = (dockerSecrets ? new recaptcha(dockerSecrets.recaptcha.public, dockerSecrets.recaptcha.private, captchaData) : null);
 
 		var baseResponseData = {
 			lang: req.langData,
