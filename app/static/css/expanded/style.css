@@ -354,7 +354,14 @@ img {
   opacity: 0;
 }
 
+.project-card-square {
+  width: 256px;
+  height: 256px;
+}
+
 .project-card-img {
+  color: #909090;
+  font-size: 0.33rem;
   overflow: hidden;
   z-index: 1;
   width: 100%;
@@ -366,6 +373,10 @@ img {
   transition: all 1.5s ease-in-out;
   min-width: 100%;
   min-height: 100%;
+}
+
+.project-card-img h1 {
+  font-size: 0.55rem;
 }
 
 .project-card-title {

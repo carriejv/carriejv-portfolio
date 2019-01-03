@@ -7,6 +7,7 @@ $accent-color-light: #9cbcff;
 $accent-color-dark: #5a8fff;
 $background-color: #030303;
 $highlight-color: #f0f0f0;
+$lowlight-color: #909090;
 $background-transparent: rgba(3, 3, 3, 0.75);
 
 $main-font-stack: 'Lato', 'Open Sans', sans-serif;
@@ -309,7 +310,14 @@ img {
     }
 }
 
+.project-card-square {
+    width: 256px;
+    height: 256px;
+}
+
 .project-card-img {
+    color: $lowlight-color;
+    font-size: 0.33rem;
     overflow: hidden;
     z-index: 1;
     width: 100%;
@@ -318,6 +326,9 @@ img {
         transition: all 1.5s ease-in-out;
         min-width: 100%;
         min-height: 100%;
+    }
+    & h1 {
+        font-size: 0.55rem;
     }
 }
 .project-card-title {
@@ -380,7 +391,7 @@ img {
     border-top: 3px groove $background-color;
     padding-bottom: 0.3rem;
     width: 100%;
-    color: #909090;
+    color: $lowlight-color;
 }
 
 .lang-active {
