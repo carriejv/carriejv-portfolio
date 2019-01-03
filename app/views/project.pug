@@ -53,7 +53,7 @@ html(lang=lang.lang)
 				div.col-12.col-md-8.col-xl-9
 					div#project-viewer.section
 						if projectData.contentType == 'img'
-							div(data-img=projectData.content)
+							div.text-center(data-img=projectData.content)
 						else
 							div(data-content=(projectData.content[lang.lang] ? projectData.content[lang.lang] : projectData.content.en))
 
