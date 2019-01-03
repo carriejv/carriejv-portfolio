@@ -4,28 +4,11 @@ html(lang=lang.lang)
 	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
 		include ./includes/nav.pug
 		div#content.container.flex-grow.scrollable-content
-			//- Nav Menu
-			div#project-nav.row
-				div.col-4.col-xl-3
-					div#project-nav-tabContainer.nav.flex-column.nav-pills.section(role='tablist' aria-orientation='vertical')
-						//- Here, k is a category id and v is category data in full.
-						each v, k in manifest
-							unless (k == 'default')
-								a.project-nav-tab.nav-link(id='project-nav-tab-' + k class=(k == activeCat ? 'active' : '') href='#project-nav-cat-' + k data-toggle='pill' data-caturi=rootDir + activePage + '/' + k  role='tab' aria-controls='project-nav-cat-' + k aria-selected='true')
-									if (v.category[lang.lang])
-										| #{v.category[lang.lang]}
-									else if (v.category.en)
-										| #{v.category.en}
-				//- Begin making the tab panes for nav.
-				div.col-8.col-xl-9
-					div#project-nav-tabContent.project-nav-content.tab-content.section
-						each v, k in manifest
-							unless (k == 'default')
-								div.project-nav-cat.tab-pane.fade(id='project-nav-cat-' + k class=(k == activeCat ? 'show active' : '')  role='tabpanel' aria-labelledby='project-nav-tab-' + k)
-									include ./includes/project-nav.pug
 			//- Project Description
 			div.row.align-items-start.justify-content-center
 				div.col-12.col-md-4.col-xl-3
+					div.section.w-100
+						a.text-bold(href=rootDir + activePage + '/' + activeCat) &laquo; Back to Projects
 					div#project-description.section.w-100
 						h2.alight #{projectData.name}
 						if (projectData.subtitle && projectData.subtitle.en)

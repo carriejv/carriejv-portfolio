@@ -1,36 +1,42 @@
-mixin projectCard(project, projectId, catId, featured)
-	mixin projectData
+mixin projectCard(project, projectId, catId)
+	a.project-card(href=rootDir + activePage + '/' + catId + '/' + projectId)
 		div.project-card-img.d-flex.align-items-center.justify-content-center
-			img(src=project.content.replace('%scale', '256') alt=project.title)
+			if project.contentType == 'img'
+				img(src=project.content.replace('%scale', '256') alt=project.title)
+			else if project.thumbnail
+				img(src=project.thumbnail.replace('%scale', '256') alt=project.title)
+			else
+				img(src='/static/media/cv-nav-staat.png'  alt=project.title)
 		div.project-card-title.alight.text-right #{project.name}
-	a.project-card(class={'featured':featured} href=rootDir + activePage + '/' + catId + '/' + projectId)
-		if featured
-			div.featured-contents
-				+projectData
-		else
-			+projectData
+		div.project-card-vignette
+
 
 			
 
 doctype html
 html(lang=lang.lang)
 	include ./includes/header.pug
-	body(style='background: white;')
+	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
 		include ./includes/nav.pug
 		div#content.container.flex-grow.scrollable-content
 			//- Project Description
 			div.row
 				div.section.col-12
-					div.row.align-content-center.align-items-center.justify-content-around.flex-wrap
-						each v, k in manifest
-							if k !== 'default'
-								// Cat default soon to be deprecated.
-								each w, j in v.projects
-									if Math.random() < 0.2
-										+projectCard(w, j, k, true)
-									else
-										+projectCard(w, j, k)
-
+					div.row
+						div#project-nav-tabContainer.nav.flex-row.nav-tabs.w-100(role='tablist' aria-orientation='horizontal')
+							each v, k in manifest
+								unless k == 'default'
+									a.project-nav-tab.nav-link(id='project-nav-tab-' + k class=(k == activeCat ? 'active' : '') href='#project-nav-cat-' + k data-toggle='pill' data-caturi=rootDir + activePage + '/' + k  role='tab' aria-controls='project-nav-cat-' + k aria-selected='true')
+										if (v.category[lang.lang])
+											| #{v.category[lang.lang]}
+										else if (v.category.en)
+											| #{v.category.en}
+						div.tab-content.w-100
+							each v, k in manifest
+								unless k == 'default'
+									div.tab-pane.fade(id='project-nav-cat-' + k class=(k == activeCat ? 'show active' : false) role='tabpanel' aria-labelledby='project-nav-tab-' + k)
+										div.d-flex.flex-row.align-content-center.align-items-center.justify-content-around.flex-wrap
+											each w, j in v.projects
+												+projectCard(w, j, k)
 
 		include ./includes/footer.pug
-		script(src='/static/js/project.js')

@@ -1,5 +1,7 @@
 'use strict';
 
+// Deprecated v1.0.0. Symonfy-site-era sliders now replaced with Flexbox gallery.
+
 (function($) {
 
 	var slidersActive = false;

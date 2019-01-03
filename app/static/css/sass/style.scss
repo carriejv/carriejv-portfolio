@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Overlock|Lato');
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Lato');
 
 $min-pg-width: 320px;
 
@@ -10,7 +10,7 @@ $highlight-color: #f0f0f0;
 $background-transparent: rgba(3, 3, 3, 0.75);
 
 $main-font-stack: 'Lato', 'Open Sans', sans-serif;
-$accent-font-stack: 'Overlock', 'Open Sans', sans-serif;
+$accent-font-stack: 'Staatliches', 'Open Sans', sans-serif;
 
 html {
     font: 16px/1.1 Lato, 'Open Sans', sans-serif;
@@ -157,6 +157,7 @@ img {
     }
     .nav-item {
         font: 400 1.1rem/0.8 $accent-font-stack;
+        font-variant: small-caps;
         transition: color 0.25s ease-in-out;
         &:not(:last-of-type) {
             margin-right: 0.5rem;
@@ -185,6 +186,7 @@ img {
 #home-text,
 #error-text {
     font: 600 1rem/1.2 $accent-font-stack;
+    font-variant: small-caps;
 }
 
 #home-subtext {
@@ -267,6 +269,14 @@ img {
     display: none;
 }
 
+.project-nav-tab {
+    font: 1.3rem/1 $accent-font-stack;
+    font-variant: small-caps;
+    flex-grow: 1;
+    border: 3px ridge $highlight-color;
+    padding: 8px 8px;
+}
+
 .project-tab {
     border: 3px ridge $highlight-color !important;
     padding: 8px 4px;
@@ -287,36 +297,14 @@ img {
     background: $background-color;
     border: 2px inset $text-color;
     box-shadow: 2px 2px 6px #000;
-    transition: all 1.5s ease-in-out;
-    &.featured {
-        width: 360px;
-        height: 360px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    & .featured-contents {
-        width: 352px;
-        height: 352px;
-        flex-grow: 0;
-        flex-shrink: 0;
-        border: 2px outset $text-color;
-        transition: all 1.5s ease-in-out;
-    }
+    transition: all 0.25s ease-in-out;
+    max-width: 256px;
+    min-width: 192px;
     &:hover {
         box-shadow: 6px 6px 2px #000;
         border: 2px inset $accent-color-light;
-        & .featured-contents {
-            border: 2px outset $accent-color-light;
-        }
-        & .project-card-title,
-        & .featured-contents .project-card-title {
-            opacity: 1;
-        }
-        & .project-card-img img,
-        & .featured-contents .project-card-img img {
-            min-width: 120%;
-            min-height: 120%;
+        & .project-card-vignette {
+            opacity: 0;
         }
     }
 }
@@ -333,19 +321,30 @@ img {
     }
 }
 .project-card-title {
+    color: $text-color;
     font: 1.4rem/1.1 $accent-font-stack;
+    font-variant: small-caps;
     pointer-events: none;
     user-select: none;
-    transition: all 1.5s ease-in-out;
-    opacity: 0;
     position: absolute;
     vertical-align: bottom;
     padding: 4px;
     width: 100%;
     bottom: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
     text-shadow: 2px 2px 1px #000;
+}
+
+.project-card-vignette {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.35) 100%);
+    transition: all 0.25s ease-in-out;
 }
 
 .project-hr {
@@ -447,11 +446,6 @@ img {
 @media screen and (min-width : 960px) {
     #nav .nav-item {
         font-size: 1.6rem;
-    }
-
-    .project-nav-tab {
-        border: 3px ridge $highlight-color;
-        padding: 8px 8px;
     }
 }
 
