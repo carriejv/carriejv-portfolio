@@ -1,12 +1,44 @@
 {
     "default": "web",
     "web": {
-        "default": "resource-map",
         "category": {
             "en": "Web",
             "es": "Web"
         },
         "projects": {
+            "sib-48h": {
+                "name": "SignsInBulk + 48HourGraphics",
+                "subtitle": {
+                    "en": "2018",
+                    "es": "2018"
+                },
+                "contentType": "html",
+                "content": {
+                    "en": "/static/media/code/code-cache/en/sib-48h.html",
+                    "es": "/static/media/code/code-cache/es/sib-48h.html"
+                },
+                "thumbnail": "/static/media/code/code-cache/thumbnails/sib-48h.png",
+                "url": "https://www.signsinbulk.com",
+                "tech": [
+                    "JavaScript",
+                    "Pug",
+                    "SCSS",
+                    "Google Cloud Storage",
+                    "Google Compute Engine",
+                    "PayPal Payflow Pro",
+                    "jQuery",
+                    "Canvas",
+                    "Bootstrap",
+                    "NodeJS",
+                    "Express",
+                    "Docker",
+                    "NGINX",
+                    "MongoDB",
+                    "Git",
+                    "PDF.js",
+                    "Gmail API"
+                ]
+            },
             "resource-map": {
                 "name": "Community Resource Map",
                 "subtitle": {
@@ -18,6 +50,7 @@
                     "en": "/static/media/code/code-cache/en/resource-map.html",
                     "es": "/static/media/code/code-cache/es/resource-map.html"
                 },
+                "thumbnail": "/static/media/code/code-cache/thumbnails/resource-map.png",
                 "url": "https://co-resource-map.firebaseapp.com",
                 "tech": [
                     "HTML",
@@ -47,6 +80,7 @@
                     "en": "Log in with demo@carrievrtis.com | password.",
                     "es": "Entre con demo@carrievrtis.com | password."
                 },
+                "thumbnail": "/static/media/code/code-cache/thumbnails/resource-db.png",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -57,6 +91,26 @@
                     "Firebase",
                     "CloudFlare",
                     "Subversion"
+                ]
+            },
+            "signs-of-justice": {
+                "name": "Signs Of Justice",
+                "subtitle": {
+                    "en": "2018-2019",
+                    "es": "2018-2019"
+                },
+                "contentType": "html",
+                "content": {
+                    "en": "/static/media/code/code-cache/en/signs-of-justice.html",
+                    "es": "/static/media/code/code-cache/es/signs-of-justice.html"
+                },
+                "thumbnail": "/static/media/code/code-cache/thumbnails/signs-of-justice.png",
+                "url": "https://www.signsofjustice.com",
+                "tech": [
+                    "Shopify",
+                    "Liquid",
+                    "Javascript",
+                    "CSS"
                 ]
             },
             "this-site": {
@@ -70,7 +124,8 @@
                     "en": "/static/media/code/code-cache/en/this-site.html",
                     "es": "/static/media/code/code-cache/es/this-site.html"
                 },
-                "url": "http://www.carrievrtis.com",
+                "thumbnail": "/static/media/code/code-cache/thumbnails/this-site.png",
+                "url": "https://www.carrievrtis.com",
                 "tech": [
                     "Pug",
                     "SCSS",
@@ -80,6 +135,7 @@
                     "NodeJS",
                     "Express",
                     "Docker",
+                    "NGINX",
                     "Git"
                 ]
             }

@@ -31,6 +31,18 @@
                     "Adobe Illustrator"
                 ]
             },
+            "48h-sib": {
+                "name": "48HourGraphics + SignsInBulk",
+                "subtitle": {
+                    "en": "Logo",
+                    "es": "Logo"
+                },
+                "contentType": "img",
+                "content": "/static/media/design/design-cache/48h-sib-logos.png",
+                "tech": [
+                    "Adobe Illustrator"
+                ]
+            },
             "oakley": {
                 "name": "Oakley Graphics",
                 "subtitle": {
