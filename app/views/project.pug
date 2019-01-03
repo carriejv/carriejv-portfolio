@@ -52,10 +52,11 @@ html(lang=lang.lang)
 				//- Project Viewer
 				div.col-12.col-md-8.col-xl-9
 					div#project-viewer.section
-						if (projectData.contentType == 'html')
-							div(data-content=(projectData.content[lang.lang] ? projectData.content[lang.lang] : projectData.content.en))
-						if (projectData.contentType == 'img')
+						if projectData.contentType == 'img'
 							div(data-img=projectData.content)
+						else
+							div(data-content=(projectData.content[lang.lang] ? projectData.content[lang.lang] : projectData.content.en))
+
 				//- Tech Summary (Mobile)
 				if(projectData.tech)
 					div.col-12.col-md-4.col-xl-3

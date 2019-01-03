@@ -57,6 +57,17 @@ img {
   max-height: 100%;
 }
 
+pre {
+  background: #f5f5f5;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+code {
+  font: 'Lucida Console', Monaco, monospace;
+}
+
 #content {
   margin-top: 96px;
   margin-bottom: 16px;
@@ -294,13 +305,17 @@ img {
 }
 
 #project-viewer img {
-  display: block;
   margin: auto;
   max-height: 80vh;
 }
 
 #project-tech-d {
   display: none;
+}
+
+#project-nav-tabContainer {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-nav-tab {
@@ -359,9 +374,17 @@ img {
   height: 256px;
 }
 
+.project-card-square a {
+  pointer-events: none;
+}
+
+.project-card-square img {
+  zoom: 0.4;
+}
+
 .project-card-img {
   color: #909090;
-  font-size: 0.33rem;
+  font-size: 0.55rem;
   overflow: hidden;
   z-index: 1;
   width: 100%;
@@ -375,8 +398,25 @@ img {
   min-height: 100%;
 }
 
-.project-card-img h1 {
-  font-size: 0.55rem;
+.project-card-img a {
+  pointer-events: none;
+  width: auto;
+  height: auto;
+}
+
+.project-card-img h1,
+.project-card-img h2,
+.project-card-img h3,
+.project-card-img h4,
+.project-card-img h5 {
+  font-size: 0.77rem;
+}
+
+.project-card-img div,
+.project-card-img code,
+.project-card-img pre {
+  vertical-align: bottom;
+  overflow: hidden;
 }
 
 .project-card-title {
@@ -414,6 +454,10 @@ img {
   width: 100%;
   border: 1px solid whitesmoke;
   margin-bottom: 0.6rem;
+}
+
+[data-content] img {
+  display: inline-block;
 }
 
 /* Contact Page */

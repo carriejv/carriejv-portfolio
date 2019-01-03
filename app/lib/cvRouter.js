@@ -15,12 +15,8 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
 var cvProject = require('./cvProject.js');
-var codeManifest = require('../static/media/code/manifest.json');
-var designManifest = require('../static/media/design/manifest.json');
-var photoManifest = require('../static/media/photo/manifest.json');
-var writingManifest = require('../static/media/writing/manifest.json');
 
-module.exports.makeRouter = function(langFile, langForce) {
+module.exports.makeRouter = function(manifests, langFile, langForce) {
 
 	var router = express.Router();
 	router.use(locale(langSupported, langDefault));
@@ -202,16 +198,16 @@ module.exports.makeRouter = function(langFile, langForce) {
 
 	/* Project Routers */
 
-	var codeRouter = cvProject.makeRouter('code', codeManifest, rootDir, '2', sendError);
+	var codeRouter = cvProject.makeRouter('code', manifests.code, rootDir, '2', sendError);
 	router.use('/code', codeRouter);
 
-	var designRouter = cvProject.makeRouter('design', designManifest, rootDir, '3', sendError);
+	var designRouter = cvProject.makeRouter('design', manifests.design, rootDir, '3', sendError);
 	router.use('/design', designRouter);
 
-	var photoRouter = cvProject.makeRouter('photo', photoManifest, rootDir, '4', sendError);
+	var photoRouter = cvProject.makeRouter('photo', manifests.photo, rootDir, '4', sendError);
 	router.use('/photo', photoRouter);
 
-	var writingRouter = cvProject.makeRouter('writing', writingManifest, rootDir, '5', sendError);
+	var writingRouter = cvProject.makeRouter('writing', manifests.writing, rootDir, '5', sendError);
 	router.use('/writing', writingRouter);
 
 	/* Generic 404 */

@@ -1,8 +1,8 @@
 'use strict';
 
 var express = require('express');
-var router = express.Router();
-
+var showdown = require('showdown').Converter();
+var axios = require('axios');
 var path = require('path');
 
 module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler) {

@@ -86,34 +86,98 @@
         }
     },
     "open-source": {
-        "default": "docker-swarm-secrets",
         "category": {
             "en": "Open Source",
             "es": "Open Source"
         },
         "projects": {
             "docker-swarm-secrets": {
+                "name": "Docker Swarm Secrets",
+                "subtitle": {
+                    "en": "2018",
+                    "es": "2018"
+                },
+                "contentType": "github",
+                "content": {
+                    "en": "/api/github/docker-swarm-secrets"
+                },
+                "url": "https://github.com/carriejv/docker-swarm-secrets",
+                "tech": [
+                    "JavaScript",
+                    "NPM",
+                    "Docker Swarm",
+                    "Git"
+                ]
+            },
+            "cytube-client": {
                 "name": "Cytube Client",
                 "subtitle": {
                     "en": "2018",
                     "es": "2018"
                 },
-                "contentType": "html",
+                "contentType": "github",
                 "content": {
-                    "en": "/static/media/code/code-cache/en/resource-map.html",
-                    "es": "/static/media/code/code-cache/es/resource-map.html"
+                    "en": "/api/github/cytube-client"
                 },
-                "url": "https://co-resource-map.firebaseapp.com",
+                "url": "https://github.com/carriejv/cytube-client",
                 "tech": [
-                    "HTML",
-                    "CSS",
                     "JavaScript",
-                    "jQuery",
-                    "Google Maps API",
-                    "TriMet API",
-                    "Firebase",
-                    "CloudFlare",
-                    "Subversion"
+                    "NPM",
+                    "Socket.io",
+                    "CyTube (sync)",
+                    "Git"
+                ]
+            },
+            "nvp-json-js": {
+                "name": "Nvp-Json Js",
+                "subtitle": {
+                    "en": "2018",
+                    "es": "2018"
+                },
+                "contentType": "github",
+                "content": {
+                    "en": "/api/github/nvp-json-js"
+                },
+                "url": "https://github.com/carriejv/nvp-json-js",
+                "tech": [
+                    "JavaScript",
+                    "NPM",
+                    "PayPal NVP API",
+                    "Git"
+                ]
+            },
+            "gc-speech-transcription-py": {
+                "name": "GC Speech Transcription",
+                "subtitle": {
+                    "en": "2018",
+                    "es": "2018"
+                },
+                "contentType": "github",
+                "content": {
+                    "en": "/api/github/gc-speech-transcription-py"
+                },
+                "url": "https://github.com/carriejv/gc-speech-transcription-py",
+                "tech": [
+                    "Python3",
+                    "Pipenv",
+                    "Google Cloud Speech API"
+                ]
+            },
+            "batch-photo-copyrighter": {
+                "name": "Batch Photo Copyrighter",
+                "subtitle": {
+                    "en": "2018",
+                    "es": "2018"
+                },
+                "contentType": "github",
+                "content": {
+                    "en": "/api/github/batch-photo-copyrighter"
+                },
+                "url": "https://github.com/carriejv/batch-photo-copyrighter",
+                "tech": [
+                    "Shell Scripting",
+                    "ImageMagick",
+                    "ExifTool"
                 ]
             }
         }

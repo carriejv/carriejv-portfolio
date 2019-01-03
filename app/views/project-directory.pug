@@ -1,11 +1,11 @@
 mixin projectCard(project, projectId, catId)
-	a.project-card(href=rootDir + activePage + '/' + catId + '/' + projectId class=(project.contentType == 'html' && !project.thumbnail ? 'project-card-square' : false))
+	a.project-card(href=rootDir + activePage + '/' + catId + '/' + projectId class=((project.contentType == 'html' || project.contentType == 'github') && !project.thumbnail ? 'project-card-square' : false))
 		div.project-card-img
 			if project.contentType == 'img'
 				img(src=project.content.replace('%scale', '256') alt=project.title)
 			else if project.thumbnail
 				img(src=project.thumbnail.replace('%scale', '256') alt=project.title)
-			else if project.contentType == 'html'
+			else if project.contentType == 'html' || project.contentType == 'github'
 				div(data-content=(project.content[lang.lang] ? project.content[lang.lang] : project.content.en))
 			else
 				img(src='/static/media/cv-nav-staat.png'  alt=project.title)
