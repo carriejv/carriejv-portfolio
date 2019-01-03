@@ -1,79 +1,36 @@
+mixin projectCard(project, projectId, catId, featured)
+	mixin projectData
+		div.project-card-img.d-flex.align-items-center.justify-content-center
+			img(src=project.content.replace('%scale', '256') alt=project.title)
+		div.project-card-title.alight.text-right #{project.name}
+	a.project-card(class={'featured':featured} href=rootDir + activePage + '/' + catId + '/' + projectId)
+		if featured
+			div.featured-contents
+				+projectData
+		else
+			+projectData
+
+			
+
 doctype html
 html(lang=lang.lang)
 	include ./includes/header.pug
-	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+	body(style='background: white;')
 		include ./includes/nav.pug
 		div#content.container.flex-grow.scrollable-content
-			//- Nav Menu
-			div#project-nav.row
-				div.col-4.col-xl-3
-					div#project-nav-tabContainer.nav.flex-column.nav-pills.section(role='tablist' aria-orientation='vertical')
-						//- Here, k is a category id and v is category data in full.
-						each v, k in manifest
-							unless (k == 'default')
-								a.project-nav-tab.nav-link(id='project-nav-tab-' + k class=(k == activeCat ? 'active' : '') href='#project-nav-cat-' + k data-toggle='pill' data-caturi=rootDir + activePage + '/' + k  role='tab' aria-controls='project-nav-cat-' + k aria-selected='true')
-									if (v.category[lang.lang])
-										| #{v.category[lang.lang]}
-									else if (v.category.en)
-										| #{v.category.en}
-				//- Begin making the tab panes for nav.
-				div.col-8.col-xl-9
-					div#project-nav-tabContent.project-nav-content.tab-content.section
-						each v, k in manifest
-							unless (k == 'default')
-								div.project-nav-cat.tab-pane.fade(id='project-nav-cat-' + k class=(k == activeCat ? 'show active' : '')  role='tabpanel' aria-labelledby='project-nav-tab-' + k)
-									include ./includes/project-nav.pug
 			//- Project Description
-			div.row.align-items-start.justify-content-center
-				div.col-12.col-md-4.col-xl-3
-					div#project-description.section.w-100
-						h2.alight #{projectData.name}
-						if (projectData.subtitle && projectData.subtitle.en)
-							h3.adark #{(projectData.subtitle[lang.lang] ? projectData.subtitle[lang.lang] : projectData.subtitle.en)}
-						if (projectData.description && projectData.description.text && projectData.description.text.en)
-							hr
-							- var content = (projectData.description.text[lang.lang] ? projectData.description.text[lang.lang] : projectData.description.text.en);
-							each v in content
-								p #{v}
-						if (projectData.url)
-							a(href=projectData.url target='_blank')
-								| #{projectData.url}
-						if (projectData.urlInstruction && projectData.urlInstruction.en)
-							div.img-caption #{(projectData.urlInstruction[lang.lang] ? projectData.urlInstruction[lang.lang] : projectData.urlInstruction.en)}
-						if (projectData.prints)
-							a(href=projectData.prints target='_blank')
-								| #{lang.photo.prints}
-								| &raquo;
-						if (projectData.pdf)
-							a(href=projectData.pdf target='_blank')
-								| #{lang.design.pdf}
-								| &raquo;
-						if(projectData.tech)
-							div#project-tech-d.project-tech
-								h3 #{lang.project.built}
-								div.project-tech-list-d.project-tech-list
-									each v in projectData.tech
-										div.project-tech-item
-											| &#8226;&nbsp;
-											| #{v}
-				//- Project Viewer
-				div.col-12.col-md-8.col-xl-9
-					div#project-viewer.section
-						if (projectData.contentType == 'html')
-							div(data-content=(projectData.content[lang.lang] ? projectData.content[lang.lang] : projectData.content.en))
-						if (projectData.contentType == 'img')
-							div(data-img=projectData.content)
-				//- Tech Summary (Mobile)
-				if(projectData.tech)
-					div.col-12.col-md-4.col-xl-3
-					div.col-12.col-md-8.col-xl-9
-						div#project-tech-m.project-tech.section
-							h3 #{lang.project.built}
-							div#project-tech-list-m.project-tech-list(class=(projectData.tech.length > 1 ? 'flex-spacing-container' : ''))
-								each v in projectData.tech
-									div.project-tech-item
-										| &#8226;&nbsp;
-										| #{v}
+			div.row
+				div.section.col-12
+					div.row.align-content-center.align-items-center.justify-content-around.flex-wrap
+						each v, k in manifest
+							if k !== 'default'
+								// Cat default soon to be deprecated.
+								each w, j in v.projects
+									if Math.random() < 0.2
+										+projectCard(w, j, k, true)
+									else
+										+projectCard(w, j, k)
+
 
 		include ./includes/footer.pug
 		script(src='/static/js/project.js')

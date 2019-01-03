@@ -1,7 +1,7 @@
 div#footer-container.container-fluid
 	div#footer
-		div.row
-			div.col-5.align-self-start
+		div.row.align-items-center
+			div.col-5.justify-self-start
 				div#lang-toggle
 					| #{lang.legal.language} : 
 					- var langUri = activePage;
@@ -10,5 +10,13 @@ div#footer-container.container-fluid
 					a(href='/en/' + langUri class=(lang.lang == 'en' ? 'lang-active' : '')) EN
 					| &nbsp;|&nbsp;
 					a(href='/es/' + langUri class=(lang.lang == 'es' ? 'lang-active' : '')) ES
-			div.col-7.align-self-end.text-right
-				div#legal.small-text Copyright &copy; 2018 Carrie Vrtis. All Rights Reserved.
+			div.col-7.justify-self-end.text-right
+				div#legal.small-text Copyright &copy; 2018 Carrie Vrtis.
+					div.d-none.d-sm-block
+						| All rights to text, image, and video content reserved.
+						br
+						| Source code available under the&nbsp;
+						a(href='https://opensource.org/licenses/MIT' target='_blank') MIT License
+						| &nbsp;on&nbsp;
+						a(href='https://github.com/carriejv/carriejv-portfolio' target='_blank') Github
+						| .

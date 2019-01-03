@@ -10,12 +10,8 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
 	var router = express.Router();
 
 	router.get("/", (req, res) => {
-		var activeCat = manifest.default;
-		var activeProj = manifest[activeCat].default;
-		res.render(path.resolve('views/project'), {
-			activeCat: activeCat,
-			activeProj: activeProj,
-			projectData: manifest[activeCat].projects[activeProj],
+		res.render(path.resolve('views/project-directory'), {
+			activeCat: manifest.default,
 			lang: req.langData,
 			manifest: manifest,
 			rootDir: rootDir,
@@ -33,11 +29,8 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
 			errorHandler(req, res, 404);
 			return;
 		}
-		var activeProj = manifest[activeCat].default;
-		res.render(path.resolve('views/project'), {
+		res.render(path.resolve('views/project-directory'), {
 			activeCat: activeCat,
-			activeProj: activeProj,
-			projectData: manifest[activeCat].projects[activeProj],
 			lang: req.langData,
 			manifest: manifest,
 			rootDir: rootDir,
