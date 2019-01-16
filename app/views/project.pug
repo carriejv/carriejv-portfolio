@@ -13,12 +13,13 @@ mixin techStack(projectData)
 								span.fa-3x.text-center(class=icons[unformatted].icon)
 						div.text-center #{v}
 		br
-		h3 #{lang.project.also}
-		div.project-tech-list-d.project-tech-list
-			each v in noValidIcons
-				div.project-tech-item
-					| &#8226;&nbsp;
-					| #{v}
+		if (noValidIcons.length > 0)
+			h3 #{lang.project.also}
+			div.project-tech-list-d.project-tech-list
+				each v in noValidIcons
+					div.project-tech-item
+						| &#8226;&nbsp;
+						| #{v}
 	else
 		h3 #{lang.project.built}
 		div.project-tech-list-d.project-tech-list
