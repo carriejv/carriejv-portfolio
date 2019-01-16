@@ -57,9 +57,11 @@
                             "Jade/Pug",
                             "Twig",
                             "Sass/Less",
+                            "Vue",
+                            "React",
+                            "AngularJS",
                             "jQuery",
-                            "Bootstrap",
-                            "AngularJS"
+                            "Bootstrap"
                         ]
                     },
                     {
@@ -230,9 +232,11 @@
                             "Jade/Pug",
                             "Twig",
                             "Sass/Less",
+                            "Vue",
+                            "React",
+                            "AngularJS",
                             "jQuery",
-                            "Bootstrap",
-                            "AngularJS"
+                            "Bootstrap"
                         ]
                     },
                     {
