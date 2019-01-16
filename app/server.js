@@ -8,6 +8,7 @@ var cvPhotos = require('./lib/cvPhotos.js');
 var cvApi = require('./lib/cvApi.js');
 
 var langFile = require('./lang/lang.json');
+var faIcons = require('./lang/fa-icons.json');
 
 app.set('view engine', 'pug');
 
@@ -18,9 +19,9 @@ var manifests = {
 	writing: require('./static/media/writing/manifest.json')
 };
 
-var localeRouter = cvRouter.makeRouter(manifests, langFile);
-var enRouter = cvRouter.makeRouter(manifests, langFile, 'en');
-var esRouter = cvRouter.makeRouter(manifests, langFile, 'es');
+var localeRouter = cvRouter.makeRouter(manifests, langFile, faIcons);
+var enRouter = cvRouter.makeRouter(manifests, langFile, faIcons, 'en');
+var esRouter = cvRouter.makeRouter(manifests, langFile, faIcons, 'es');
 var apiRouter = cvApi.makeRouter();
 
 app.use('/favicon.ico', express.static('static/favicon.ico'));

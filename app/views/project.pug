@@ -1,3 +1,38 @@
+mixin techStack(projectData)
+	- let validIcons  = projectData.tech.filter((item) => {return icons[item.replace(/\W/g, '').toLowerCase()];});
+	- let noValidIcons = projectData.tech.filter((item) => {return !icons[item.replace(/\W/g, '').toLowerCase()];});
+	if (validIcons.length > 0)
+		h3 #{lang.project.built}
+		div.project-tech-list-d.project-tech-list
+			div.d-flex.justify-content-around.align-items-top.flex-wrap
+				each v in validIcons
+					div.project-tech-icon
+						div
+							a.nav-link(href=icons[v.replace(/\W/g, '').toLowerCase()].url target='_blank')
+								span.fa-3x.text-center(class=icons[v.replace(/\W/g, '').toLowerCase()].icon)
+						div.text-center #{v}
+		br
+		h3 #{lang.project.also}
+		div.project-tech-list-d.project-tech-list
+			each v in noValidIcons
+				div.project-tech-item
+					| &#8226;&nbsp;
+					| #{v}
+	else
+		h3 #{lang.project.built}
+		div.project-tech-list-d.project-tech-list
+			each v in projectData.tech
+				div.project-tech-item
+					| &#8226;&nbsp;
+					| #{v}
+	if (projectData.api)
+		br
+		h3 #{lang.project.api}
+		each v in projectData.api
+			div.project-tech-item
+				| &#8226;&nbsp;
+				| #{v}
+
 doctype html
 html(lang=lang.lang)
 	include ./includes/header.pug
@@ -41,16 +76,9 @@ html(lang=lang.lang)
 							a(href=projectData.pdf target='_blank')
 								| #{lang.design.pdf}
 								| &raquo;
-						if(projectData.tech)
+						if (projectData.tech)
 							div#project-tech-d.project-tech
-								h3 #{lang.project.built}
-								div.project-tech-list-d.project-tech-list
-									each v in projectData.tech
-										div.project-tech-item
-											| &#8226;&nbsp;
-											| #{v}
-										div.project-tech-item
-											span(class='fas fa-' + v.toLowerCase())
+								+techStack(projectData)
 				//- Project Viewer
 				div.col-12.col-md-8.col-xl-9
 					div#project-viewer.section
@@ -64,12 +92,7 @@ html(lang=lang.lang)
 					div.col-12.col-md-4.col-xl-3
 					div.col-12.col-md-8.col-xl-9
 						div#project-tech-m.project-tech.section
-							h3 #{lang.project.built}
-							div#project-tech-list-m.project-tech-list(class=(projectData.tech.length > 1 ? 'flex-spacing-container' : ''))
-								each v in projectData.tech
-									div.project-tech-item
-										| &#8226;&nbsp;
-										| #{v}
+							+techStack(projectData)
 
 		include ./includes/footer.pug
 		script(src='/static/js/project-load.js')

@@ -45,7 +45,7 @@
                             "HTML",
                             "CSS",
                             "JavaScript",
-                            "NodeJS",
+                            "Node.js",
                             "PHP",
                             "Java",
                             "Python"
@@ -121,7 +121,9 @@
             }
         },
         "project": {
-            "built": "Made with..."
+            "built": "Made with...",
+            "also": "Also featuring...",
+            "api": "API Integrations"
         },
         "code": {
             "name": "Code"
@@ -224,7 +226,7 @@
                             "HTML",
                             "CSS",
                             "JavaScript",
-                            "NodeJS",
+                            "Node.js",
                             "PHP",
                             "Java",
                             "Python"
@@ -300,7 +302,9 @@
              }
         },
         "project": {
-            "built": "Hecho con..."
+            "built": "Hecho con...",
+            "also": "También con...",
+            "api": "Integraciones API"
         },
         "code": {
             "name": "Código"

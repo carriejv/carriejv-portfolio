@@ -61,6 +61,7 @@ module.exports.makeRouter = function(pageId, manifest, rootDir, bg, errorHandler
 			activeProj: activeProj,
 			projectData: manifest[activeCat].projects[activeProj],
 			lang: req.langData,
+			icons: req.iconData,
 			manifest: manifest,
 			rootDir: rootDir,
 			activePage:pageId,

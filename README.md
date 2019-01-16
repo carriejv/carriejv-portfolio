@@ -4,7 +4,7 @@
 
 [Carrievrtis.com](https://www.carrievrtis.com) is my personal portfolio website, built with:
 
-* A NodeJS/Express backend deployed as a load-balanced Docker swarm.
+* A Node.js/Express backend deployed as a load-balanced Docker swarm.
 * A Pug and Sass-based front end.
 * A bit of jQuery, too - to make the magic happen.
 

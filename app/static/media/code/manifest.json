@@ -20,22 +20,32 @@
                 "thumbnail": "/static/media/code/code-cache/thumbnails/sib-48h.png",
                 "url": "https://www.signsinbulk.com",
                 "tech": [
+                    "HTML",
+                    "CSS",
                     "JavaScript",
+                    "Node.js",
                     "Pug",
                     "SCSS",
+                    "jQuery",
+                    "HTML Canvas",
+                    "Bootstrap",
+                    "Express",
+                    "MongoDB",
+                    "NGINX",
+                    "Docker",
                     "Google Cloud Storage",
                     "Google Compute Engine",
-                    "PayPal Payflow Pro",
-                    "jQuery",
-                    "Canvas",
-                    "Bootstrap",
-                    "NodeJS",
-                    "Express",
-                    "Docker",
-                    "NGINX",
-                    "MongoDB",
                     "Git",
-                    "PDF.js",
+                    "Atlassian",
+                    "Bitbucket",
+                    "Jira",
+                    "Linux",
+                    "Shell",
+                    "PDF.js"
+                ],
+                "api": [
+                    "PayPal Payflow Pro",
+                    "Google Cloud Storage API",
                     "Gmail API"
                 ]
             },
@@ -57,11 +67,16 @@
                     "CSS",
                     "JavaScript",
                     "jQuery",
-                    "Google Maps API",
-                    "TriMet API",
                     "Firebase",
                     "CloudFlare",
-                    "Subversion"
+                    "Atlassian",
+                    "Bitbucket",
+                    "Jira",
+                    "Windows"
+                ],
+                "api": [
+                    "Google Maps API",
+                    "TriMet API"
                 ]
             },
             "resource-db": {
@@ -86,11 +101,16 @@
                     "CSS",
                     "JavaScript",
                     "jQuery",
-                    "Google Maps API",
-                    "TriMet API",
                     "Firebase",
                     "CloudFlare",
-                    "Subversion"
+                    "Atlassian",
+                    "Bitbucket",
+                    "Jira",
+                    "Windows"
+                ],
+                "api": [
+                    "Google Maps API",
+                    "TriMet API"
                 ]
             },
             "signs-of-justice": {
@@ -109,8 +129,10 @@
                 "tech": [
                     "Shopify",
                     "Liquid",
+                    "HTML",
                     "Javascript",
-                    "CSS"
+                    "CSS",
+                    "SCSS"
                 ]
             },
             "this-site": {
@@ -127,16 +149,21 @@
                 "thumbnail": "/static/media/code/code-cache/thumbnails/this-site.png",
                 "url": "https://www.carrievrtis.com",
                 "tech": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Node.js",
                     "Pug",
                     "SCSS",
-                    "JavaScript",
                     "jQuery",
                     "Bootstrap",
-                    "NodeJS",
                     "Express",
                     "Docker",
                     "NGINX",
-                    "Git"
+                    "Git",
+                    "GitHub",
+                    "Linux",
+                    "Shell"
                 ]
             }
         }
@@ -160,9 +187,12 @@
                 "url": "https://github.com/carriejv/docker-swarm-secrets",
                 "tech": [
                     "JavaScript",
-                    "NPM",
-                    "Docker Swarm",
-                    "Git"
+                    "Node.js",
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Linux",
+                    "Shell"
                 ]
             },
             "cytube-client": {
@@ -178,10 +208,13 @@
                 "url": "https://github.com/carriejv/cytube-client",
                 "tech": [
                     "JavaScript",
-                    "NPM",
+                    "Node.js",
                     "Socket.io",
                     "CyTube (sync)",
-                    "Git"
+                    "Git",
+                    "GitHub",
+                    "Linux",
+                    "Shell"
                 ]
             },
             "nvp-json-js": {
@@ -197,9 +230,14 @@
                 "url": "https://github.com/carriejv/nvp-json-js",
                 "tech": [
                     "JavaScript",
-                    "NPM",
-                    "PayPal NVP API",
-                    "Git"
+                    "Node.js",
+                    "Git",
+                    "GitHub",
+                    "Linux",
+                    "Shell"
+                ],
+                "api": [
+                    "PayPal NVP APIs"
                 ]
             },
             "gc-speech-transcription-py": {
@@ -214,8 +252,12 @@
                 },
                 "url": "https://github.com/carriejv/gc-speech-transcription-py",
                 "tech": [
-                    "Python3",
+                    "Python",
                     "Pipenv",
+                    "Linux",
+                    "Shell"
+                ],
+                "api": [
                     "Google Cloud Speech API"
                 ]
             },
@@ -231,7 +273,8 @@
                 },
                 "url": "https://github.com/carriejv/batch-photo-copyrighter",
                 "tech": [
-                    "Shell Scripting",
+                    "Linux",
+                    "Shell",
                     "ImageMagick",
                     "ExifTool"
                 ]

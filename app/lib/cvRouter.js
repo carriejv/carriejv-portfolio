@@ -16,7 +16,7 @@ var nodemailer = require('nodemailer');
 
 var cvProject = require('./cvProject.js');
 
-module.exports.makeRouter = function(manifests, langFile, langForce) {
+module.exports.makeRouter = function(manifests, langFile, faIcons, langForce) {
 
 	var router = express.Router();
 	router.use(locale(langSupported, langDefault));
@@ -30,6 +30,7 @@ module.exports.makeRouter = function(manifests, langFile, langForce) {
 		else {
 			req.langData = langFile[req.locale];
 		}
+		req.iconData = faIcons;
 		next();
 	});
 

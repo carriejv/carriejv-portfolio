@@ -1,0 +1,114 @@
+{
+    "html": {
+        "icon": "fab fa-html5",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    "css": {
+        "icon": "fab fa-css3-alt",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    "javascript": {
+        "icon": "fab fa-js",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    "php": {
+        "icon": "fab fa-php",
+        "url": "http://php.net"
+    },
+    "python": {
+        "icon": "fab fa-python",
+        "url": "https://www.python.org"
+    },
+    "sass": {
+        "icon": "fab fa-sass",
+        "url": "https://sass-lang.com"
+    },
+    "scss": {
+        "icon": "fab fa-sass",
+        "url": "https://sass-lang.com"
+    },
+    "nodejs": {
+        "icon": "fab fa-node-js",
+        "url": "https://nodejs.org"
+    },
+    "less": {
+        "icon": "fab fa-less",
+        "url": "http://lesscss.org"
+    },
+    "react": {
+        "icon": "fab fa-react",
+        "url": "https://reactjs.org"
+    },
+    "angularjs": {
+        "icon": "fab fa-angular",
+        "url": "https://angularjs.org"
+    },
+    "sql": {
+        "icon": "fas fa-database",
+        "url": "https://www.mysql.com"
+    },
+    "mongodb": {
+        "icon": "fas fa-leaf",
+        "url": "https://www.mongodb.com"
+    },
+    "vuejs": {
+        "icon": "fab fa-vuejs",
+        "url": "https://vuejs.org"
+    },
+    "git": {
+        "icon": "fab fa-git",
+        "url": "https://git-scm.com"
+    },
+    "github": {
+        "icon": "fab fa-github",
+        "url": "https://github.com"
+    },
+    "trello": {
+        "icon": "fab fa-trello",
+        "url": "https://trello.com"
+    }, 
+    "atlassian": {
+        "icon": "fab fa-atlassian",
+        "url": "https://www.atlassian.com"
+    },
+    "bitbucket": {
+        "icon": "fab fa-bitbucket",
+        "url": "https://bitbucket.org"
+    },
+    "jira": {
+        "icon": "fab fa-jira",
+        "url": "https://www.atlassian.com/software/jira"
+    }, 
+    "docker": {
+        "icon": "fab fa-docker",
+        "url": "https://www.docker.com"
+    },
+    "aws": {
+        "icon": "fab fa-aws",
+        "url": "https://aws.amazon.com"
+    },
+    "linux": {
+        "icon": "fab fa-linux",
+        "url": "https://github.com/torvalds/linux"     
+    },
+    "windows": {
+        "icon": "fab fa-microsoft",
+        "url": "https://www.microsoft.com/en-us/windows"     
+    },
+    "osx": {
+        "icon": "fab fa-apple",
+        "url": "https://www.apple.com/macos"
+    },
+    "shell": {
+        "icon": "fas fa-terminal",
+        "url": "http://zsh.sourceforge.net"     
+    },
+    "adobe": {
+        "icon": "fab fa-adobe",
+        "url": "https://www.adobe.com/creativecloud.html"
+    },
+    "pdf": {
+        "icon": "fas fa-pdf",
+        "url": "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
+    }
+}
