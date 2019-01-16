@@ -29,7 +29,7 @@
                "name": "About Me",
                "p": [
                    "I produce websites and multimedia packages that combine text, photos, videos, and interactive elements.",
-                   "I have worked in web development for six years on a wide array of projects - commercial, educational, and entertainment.",
+                   "I am a veteran web developer with experience working on a wide array of projects - commercial, educational, and entertainment.",
                    "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career. I believe that open communication is one of the greatest tools we have for addressing social problems, and do my best to ensure my work can reach as many people as possible.",
                    "My photography has been recognized by Magnum Photos, an international photography cooperative. It has also appeared in a handful of newspapers and online publications.",
                    "I'm also experienced in writing SEO-friendly copy and social media marketing for my content. In addition to business-related writing, I write creative fiction (mostly short stories) as a hobby.",
@@ -202,7 +202,7 @@
                 "name": "Acerca De",
                 "p": [
                     "Produzco sitios del web y paquetes de texto, fotos, videos, y funciones interactivas.",
-                    "He trabajado en el diseño web por seis años en un gran variedad de projectos para comercio, educación, y entretenimiento.",
+                    "He trabajado en el diseño web para un gran variedad de projectos para comercio, educación, y entretenimiento.",
                     "He diseñado para audiencias con necesidades especiales y problemas de accesibilidad por un gran parte de mi carrera. Creo que la comunicación es una de las mejores herramientas que tenemos para abordar los problemas sociales, y hago todo lo posible para asegurar que mi trabajo sea comprensible para todos.",
                     "Mi fotografía fue reconocido por Magnum Photos, un cooperativa de fotografía internacional. También ha aparecido en varios periódicos y publicaciones en línea.",
                     "Tengo experiencia en la optimización para buscadores y anunciar de las redes sociales. Además de la publicidad, escribo ficción creativa (principalmente cuentos cortos) como pasatiempo.",
@@ -210,15 +210,7 @@
                 ]
              },
              "tech": {
-                 "name": "Tecnología",
-                 "p": [
-                   "I produce websites and multimedia packages that combine text, photos, videos, and interactive elements.",
-                   "I have worked in web development for six years on a wide array of projects - commercial, educational, and entertainment.",
-                   "I've designed for audiences with special needs and accessability concerns in the nonprofit sector much of my career. I believe that communication is one of the greatest tools we have for addressing social problems, and do my best to ensure my work can reach as many people as possible.",
-                   "My photography has been recognized by Magnum Photos, an international photography cooperative. It has also appeared in a handful of newspapers and online publications.",
-                   "I'm also experienced in writing SEO-friendly copy and social media marketing for my content. In addition to business-related writing, I write creative fiction (mostly short stories) as a hobby.",
-                   "My free time is mostly spent traveling around the Pacific Northwest (and beyond) to see friends and take photos, or on my nerdier hobbies of breaking computers in interesting ways and Twitch streaming."
-                ],
+                "name": "Tecnología",
                 "list": [
                     {
                         "name": "Lenguajes de Programación",
