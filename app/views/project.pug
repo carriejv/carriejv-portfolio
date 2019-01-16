@@ -1,7 +1,7 @@
 doctype html
 html(lang=lang.lang)
 	include ./includes/header.pug
-	body(style='background: #030303 url("/static/media/bg/' + bg + '.jpg") center/cover no-repeat')
+	body(style=`background: #030303 url("/static/media/bg/${bg}.jpg") center/cover no-repeat`)
 		include ./includes/nav.pug
 		div#content.container.flex-grow.scrollable-content
 			//- Project Description
@@ -49,6 +49,8 @@ html(lang=lang.lang)
 										div.project-tech-item
 											| &#8226;&nbsp;
 											| #{v}
+										div.project-tech-item
+											span(class='fas fa-' + v.toLowerCase())
 				//- Project Viewer
 				div.col-12.col-md-8.col-xl-9
 					div#project-viewer.section

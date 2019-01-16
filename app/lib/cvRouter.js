@@ -117,8 +117,8 @@ module.exports.makeRouter = function(manifests, langFile, langForce) {
 						from: '"Carrie Vrtis" <noreply@carrievrtis.com>',
 						to: 'cjvrtis@gmail.com',
 						subject: mailSubject,
-						text: "CarrieVrtis.com Contact\n\nFrom: " + mailFirstName + " " + mailLastName + " < " + usrData.email + ">\n" + mailCompany + "\n\n" + mailSubject + '\n\n' + mailMessage,
-						html: '<p>CarrieVrtis.com Contact</p><hr /><p><b>From: ' + mailFirstName + ' ' + mailLastName + ' &lt;' + usrData.email + '&gt;</b></p><p>' + mailCompany + '</p><p>' + mailSubject + '</p><p>' + mailMessage + '</p>'
+						text: `CarrieVrtis.com Contact\n\nFrom: ${mailFirstName} ${mailLastName} <${usrData.email}>\n${mailCompany}\n\n${mailSubject}\n\n${mailMessage}`,
+						html: `<p>CarrieVrtis.com Contact</p><hr /><p><b>From: ${mailFirstName} ${mailLastName} &lt;${usrData.email}&gt;</b></p><p>${mailCompany}</p><p>${mailSubject}</p><p>${mailMessage}</p>`
 					};
 
 					if(usrData.sendCopy) {

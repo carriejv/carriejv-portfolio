@@ -13,7 +13,7 @@ router.get("/:width/:img", (req, res) => {
 	var reqWidth = parseInt(req.params.width);
 
 	if(isNaN(reqWidth)) {
-		res.redirect('/' + availableWidths[0] + '/' + req.params.img);
+		res.redirect(`/${availableWidths[0]}/${req.params.img}`);
 	}
 
 	var bestMatch = availableWidths[0];
