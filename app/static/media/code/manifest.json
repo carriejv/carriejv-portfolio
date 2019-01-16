@@ -148,6 +148,7 @@
                 },
                 "thumbnail": "/static/media/code/code-cache/thumbnails/this-site.png",
                 "url": "https://www.carrievrtis.com",
+                "github": "https://github.com/carriejv/carriejv-portfolio",
                 "tech": [
                     "HTML",
                     "CSS",
@@ -160,6 +161,7 @@
                     "Express",
                     "Docker",
                     "NGINX",
+                    "CloudFlare",
                     "Git",
                     "GitHub",
                     "Linux",
@@ -185,6 +187,7 @@
                     "en": "/api/github/docker-swarm-secrets"
                 },
                 "url": "https://github.com/carriejv/docker-swarm-secrets",
+                "github": "https://github.com/carriejv/docker-swarm-secrets",
                 "tech": [
                     "JavaScript",
                     "Node.js",
@@ -206,6 +209,7 @@
                     "en": "/api/github/cytube-client"
                 },
                 "url": "https://github.com/carriejv/cytube-client",
+                "github": "https://github.com/carriejv/cytube-client",
                 "tech": [
                     "JavaScript",
                     "Node.js",
@@ -228,6 +232,7 @@
                     "en": "/api/github/nvp-json-js"
                 },
                 "url": "https://github.com/carriejv/nvp-json-js",
+                "github": "https://github.com/carriejv/nvp-json-js",
                 "tech": [
                     "JavaScript",
                     "Node.js",
@@ -251,6 +256,7 @@
                     "en": "/api/github/gc-speech-transcription-py"
                 },
                 "url": "https://github.com/carriejv/gc-speech-transcription-py",
+                "github": "https://github.com/carriejv/gc-speech-transcription-py",
                 "tech": [
                     "Python",
                     "Pipenv",
@@ -272,6 +278,7 @@
                     "en": "/api/github/batch-photo-copyrighter"
                 },
                 "url": "https://github.com/carriejv/batch-photo-copyrighter",
+                "github": "https://github.com/carriejv/batch-photo-copyrighter",
                 "tech": [
                     "Linux",
                     "Shell",

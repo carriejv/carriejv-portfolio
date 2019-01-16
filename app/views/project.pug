@@ -6,10 +6,11 @@ mixin techStack(projectData)
 		div.project-tech-list-d.project-tech-list
 			div.d-flex.justify-content-around.align-items-top.flex-wrap
 				each v in validIcons
+					- let unformatted = v.replace(/\W/g, '').toLowerCase();
 					div.project-tech-icon
 						div
-							a.nav-link(href=icons[v.replace(/\W/g, '').toLowerCase()].url target='_blank')
-								span.fa-3x.text-center(class=icons[v.replace(/\W/g, '').toLowerCase()].icon)
+							a.nav-link(href=(projectData.github && unformatted == 'github' ? projectData.github : icons[unformatted].url) target='_blank')
+								span.fa-3x.text-center(class=icons[unformatted].icon)
 						div.text-center #{v}
 		br
 		h3 #{lang.project.also}
